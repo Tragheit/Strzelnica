@@ -28,12 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.WydOdśwież = new System.Windows.Forms.Button();
             this.WydEdytuj = new System.Windows.Forms.Button();
             this.WydUsuń = new System.Windows.Forms.Button();
             this.WydDodaj = new System.Windows.Forms.Button();
             this.Wypożyczenia = new System.Windows.Forms.TabPage();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDKLIENTADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDTRENERADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDSTANOWISKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDBRONIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAPOCZATEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAKONIECDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wYPOZYCZENIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.strzelnicaDS = new StrzelnicaDS();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.WypDodaj = new System.Windows.Forms.Button();
             this.WypEdytuj = new System.Windows.Forms.Button();
@@ -41,6 +52,13 @@
             this.WypUsuń = new System.Windows.Forms.Button();
             this.Bronie = new System.Windows.Forms.TabPage();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mODELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tYPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aMUNICJADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bRONIEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.BrDodaj = new System.Windows.Forms.Button();
             this.BrEdytuj = new System.Windows.Forms.Button();
@@ -48,6 +66,11 @@
             this.BrUsuń = new System.Windows.Forms.Button();
             this.Stanowiska = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kULOCHWYTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cENAWYNAJMUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTANOWISKABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.StDodaj = new System.Windows.Forms.Button();
             this.StEdytuj = new System.Windows.Forms.Button();
@@ -55,6 +78,10 @@
             this.StUsuń = new System.Windows.Forms.Button();
             this.Karnety = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rODZAJKARNETUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAWAZNOSCIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kARNETYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.KaDodaj = new System.Windows.Forms.Button();
             this.KaEdytuj = new System.Windows.Forms.Button();
@@ -62,6 +89,10 @@
             this.KaOdśwież = new System.Windows.Forms.Button();
             this.Trenerzy = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMIEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAZWISKODataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tRENERZYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.TrDodaj = new System.Windows.Forms.Button();
             this.TrUsuń = new System.Windows.Forms.Button();
@@ -69,29 +100,48 @@
             this.TrEdytuj = new System.Windows.Forms.Button();
             this.Klienci = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMIEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAZWISKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDKARNETUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wIEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kLIENCIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.KlDodaj = new System.Windows.Forms.Button();
             this.KlEdytuj = new System.Windows.Forms.Button();
             this.KlUsuń = new System.Windows.Forms.Button();
-            this.KlOdśwież = new System.Windows.Forms.Button();
+            this.KlUOdśwież = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.kLIENCITableAdapter = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
+            this.tRENERZYTableAdapter = new StrzelnicaDSTableAdapters.TRENERZYTableAdapter();
+            this.kARNETYTableAdapter = new StrzelnicaDSTableAdapters.KARNETYTableAdapter();
+            this.sTANOWISKATableAdapter = new StrzelnicaDSTableAdapters.STANOWISKATableAdapter();
+            this.bRONIETableAdapter = new StrzelnicaDSTableAdapters.BRONIETableAdapter();
+            this.wYPOZYCZENIATableAdapter = new StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter();
             this.Wypożyczenia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wYPOZYCZENIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.Bronie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRONIEBindingSource)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.Stanowiska.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTANOWISKABindingSource)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.Karnety.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kARNETYBindingSource)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.Trenerzy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tRENERZYBindingSource)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.Klienci.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kLIENCIBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
@@ -146,13 +196,96 @@
             // 
             // dataGridView6
             // 
+            this.dataGridView6.AllowUserToAddRows = false;
+            this.dataGridView6.AllowUserToDeleteRows = false;
+            this.dataGridView6.AutoGenerateColumns = false;
+            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn5,
+            this.iDKLIENTADataGridViewTextBoxColumn,
+            this.iDTRENERADataGridViewTextBoxColumn,
+            this.iDSTANOWISKADataGridViewTextBoxColumn,
+            this.iDBRONIDataGridViewTextBoxColumn,
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn,
+            this.dATAPOCZATEKDataGridViewTextBoxColumn,
+            this.dATAKONIECDataGridViewTextBoxColumn});
+            this.dataGridView6.DataSource = this.wYPOZYCZENIABindingSource;
             this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView6.Location = new System.Drawing.Point(3, 3);
             this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.ReadOnly = true;
             this.dataGridView6.RowTemplate.Height = 24;
             this.dataGridView6.Size = new System.Drawing.Size(833, 392);
             this.dataGridView6.TabIndex = 2;
+            this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
+            // 
+            // iDDataGridViewTextBoxColumn5
+            // 
+            this.iDDataGridViewTextBoxColumn5.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn5.FillWeight = 40.60914F;
+            this.iDDataGridViewTextBoxColumn5.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn5.Name = "iDDataGridViewTextBoxColumn5";
+            this.iDDataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // iDKLIENTADataGridViewTextBoxColumn
+            // 
+            this.iDKLIENTADataGridViewTextBoxColumn.DataPropertyName = "ID_KLIENTA";
+            this.iDKLIENTADataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.iDKLIENTADataGridViewTextBoxColumn.HeaderText = "ID_KLIENTA";
+            this.iDKLIENTADataGridViewTextBoxColumn.Name = "iDKLIENTADataGridViewTextBoxColumn";
+            // 
+            // iDTRENERADataGridViewTextBoxColumn
+            // 
+            this.iDTRENERADataGridViewTextBoxColumn.DataPropertyName = "ID_TRENERA";
+            this.iDTRENERADataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.iDTRENERADataGridViewTextBoxColumn.HeaderText = "ID_TRENERA";
+            this.iDTRENERADataGridViewTextBoxColumn.Name = "iDTRENERADataGridViewTextBoxColumn";
+            // 
+            // iDSTANOWISKADataGridViewTextBoxColumn
+            // 
+            this.iDSTANOWISKADataGridViewTextBoxColumn.DataPropertyName = "ID_STANOWISKA";
+            this.iDSTANOWISKADataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.iDSTANOWISKADataGridViewTextBoxColumn.HeaderText = "ID_STANOWISKA";
+            this.iDSTANOWISKADataGridViewTextBoxColumn.Name = "iDSTANOWISKADataGridViewTextBoxColumn";
+            // 
+            // iDBRONIDataGridViewTextBoxColumn
+            // 
+            this.iDBRONIDataGridViewTextBoxColumn.DataPropertyName = "ID_BRONI";
+            this.iDBRONIDataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.iDBRONIDataGridViewTextBoxColumn.HeaderText = "ID_BRONI";
+            this.iDBRONIDataGridViewTextBoxColumn.Name = "iDBRONIDataGridViewTextBoxColumn";
+            // 
+            // iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn
+            // 
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.DataPropertyName = "ILOSC_PAKIETOW_AMUNICJI";
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.HeaderText = "ILOSC_PAKIETOW_AMUNICJI";
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.Name = "iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn";
+            // 
+            // dATAPOCZATEKDataGridViewTextBoxColumn
+            // 
+            this.dATAPOCZATEKDataGridViewTextBoxColumn.DataPropertyName = "DATA_POCZATEK";
+            this.dATAPOCZATEKDataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.dATAPOCZATEKDataGridViewTextBoxColumn.HeaderText = "DATA_POCZATEK";
+            this.dATAPOCZATEKDataGridViewTextBoxColumn.Name = "dATAPOCZATEKDataGridViewTextBoxColumn";
+            // 
+            // dATAKONIECDataGridViewTextBoxColumn
+            // 
+            this.dATAKONIECDataGridViewTextBoxColumn.DataPropertyName = "DATA_KONIEC";
+            this.dATAKONIECDataGridViewTextBoxColumn.FillWeight = 108.4844F;
+            this.dATAKONIECDataGridViewTextBoxColumn.HeaderText = "DATA_KONIEC";
+            this.dATAKONIECDataGridViewTextBoxColumn.Name = "dATAKONIECDataGridViewTextBoxColumn";
+            // 
+            // wYPOZYCZENIABindingSource
+            // 
+            this.wYPOZYCZENIABindingSource.DataMember = "WYPOZYCZENIA";
+            this.wYPOZYCZENIABindingSource.DataSource = this.strzelnicaDS;
+            // 
+            // strzelnicaDS
+            // 
+            this.strzelnicaDS.DataSetName = "StrzelnicaDS";
+            this.strzelnicaDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel8
             // 
@@ -225,13 +358,68 @@
             // 
             // dataGridView5
             // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn4,
+            this.pRODUCENTDataGridViewTextBoxColumn,
+            this.mODELDataGridViewTextBoxColumn,
+            this.tYPDataGridViewTextBoxColumn,
+            this.aMUNICJADataGridViewTextBoxColumn,
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn});
+            this.dataGridView5.DataSource = this.bRONIEBindingSource;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView5.Location = new System.Drawing.Point(3, 3);
             this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowTemplate.Height = 24;
             this.dataGridView5.Size = new System.Drawing.Size(833, 392);
             this.dataGridView5.TabIndex = 2;
+            // 
+            // iDDataGridViewTextBoxColumn4
+            // 
+            this.iDDataGridViewTextBoxColumn4.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn4.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn4.Name = "iDDataGridViewTextBoxColumn4";
+            this.iDDataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // pRODUCENTDataGridViewTextBoxColumn
+            // 
+            this.pRODUCENTDataGridViewTextBoxColumn.DataPropertyName = "PRODUCENT";
+            this.pRODUCENTDataGridViewTextBoxColumn.HeaderText = "PRODUCENT";
+            this.pRODUCENTDataGridViewTextBoxColumn.Name = "pRODUCENTDataGridViewTextBoxColumn";
+            // 
+            // mODELDataGridViewTextBoxColumn
+            // 
+            this.mODELDataGridViewTextBoxColumn.DataPropertyName = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.HeaderText = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.Name = "mODELDataGridViewTextBoxColumn";
+            // 
+            // tYPDataGridViewTextBoxColumn
+            // 
+            this.tYPDataGridViewTextBoxColumn.DataPropertyName = "TYP";
+            this.tYPDataGridViewTextBoxColumn.HeaderText = "TYP";
+            this.tYPDataGridViewTextBoxColumn.Name = "tYPDataGridViewTextBoxColumn";
+            // 
+            // aMUNICJADataGridViewTextBoxColumn
+            // 
+            this.aMUNICJADataGridViewTextBoxColumn.DataPropertyName = "AMUNICJA";
+            this.aMUNICJADataGridViewTextBoxColumn.HeaderText = "AMUNICJA";
+            this.aMUNICJADataGridViewTextBoxColumn.Name = "aMUNICJADataGridViewTextBoxColumn";
+            // 
+            // cENAWYPOZYCZENIADataGridViewTextBoxColumn
+            // 
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.DataPropertyName = "CENA_WYPOZYCZENIA";
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.HeaderText = "CENA_WYPOZYCZENIA";
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.Name = "cENAWYPOZYCZENIADataGridViewTextBoxColumn";
+            // 
+            // bRONIEBindingSource
+            // 
+            this.bRONIEBindingSource.DataMember = "BRONIE";
+            this.bRONIEBindingSource.DataSource = this.strzelnicaDS;
             // 
             // tableLayoutPanel7
             // 
@@ -304,13 +492,54 @@
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn3,
+            this.kULOCHWYTDataGridViewTextBoxColumn,
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn,
+            this.cENAWYNAJMUDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.sTANOWISKABindingSource;
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(3, 3);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(833, 392);
             this.dataGridView4.TabIndex = 2;
+            // 
+            // iDDataGridViewTextBoxColumn3
+            // 
+            this.iDDataGridViewTextBoxColumn3.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn3.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn3.Name = "iDDataGridViewTextBoxColumn3";
+            this.iDDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // kULOCHWYTDataGridViewTextBoxColumn
+            // 
+            this.kULOCHWYTDataGridViewTextBoxColumn.DataPropertyName = "KULOCHWYT";
+            this.kULOCHWYTDataGridViewTextBoxColumn.HeaderText = "KULOCHWYT";
+            this.kULOCHWYTDataGridViewTextBoxColumn.Name = "kULOCHWYTDataGridViewTextBoxColumn";
+            // 
+            // oDLEGLOSCODCELUDataGridViewTextBoxColumn
+            // 
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.DataPropertyName = "ODLEGLOSC_OD_CELU";
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.HeaderText = "ODLEGLOSC_OD_CELU";
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.Name = "oDLEGLOSCODCELUDataGridViewTextBoxColumn";
+            // 
+            // cENAWYNAJMUDataGridViewTextBoxColumn
+            // 
+            this.cENAWYNAJMUDataGridViewTextBoxColumn.DataPropertyName = "CENA_WYNAJMU";
+            this.cENAWYNAJMUDataGridViewTextBoxColumn.HeaderText = "CENA_WYNAJMU";
+            this.cENAWYNAJMUDataGridViewTextBoxColumn.Name = "cENAWYNAJMUDataGridViewTextBoxColumn";
+            // 
+            // sTANOWISKABindingSource
+            // 
+            this.sTANOWISKABindingSource.DataMember = "STANOWISKA";
+            this.sTANOWISKABindingSource.DataSource = this.strzelnicaDS;
             // 
             // tableLayoutPanel6
             // 
@@ -383,13 +612,47 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn2,
+            this.rODZAJKARNETUDataGridViewTextBoxColumn,
+            this.dATAWAZNOSCIDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.kARNETYBindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(833, 392);
             this.dataGridView3.TabIndex = 1;
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            this.iDDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // rODZAJKARNETUDataGridViewTextBoxColumn
+            // 
+            this.rODZAJKARNETUDataGridViewTextBoxColumn.DataPropertyName = "RODZAJ_KARNETU";
+            this.rODZAJKARNETUDataGridViewTextBoxColumn.HeaderText = "RODZAJ_KARNETU";
+            this.rODZAJKARNETUDataGridViewTextBoxColumn.Name = "rODZAJKARNETUDataGridViewTextBoxColumn";
+            // 
+            // dATAWAZNOSCIDataGridViewTextBoxColumn
+            // 
+            this.dATAWAZNOSCIDataGridViewTextBoxColumn.DataPropertyName = "DATA_WAZNOSCI";
+            this.dATAWAZNOSCIDataGridViewTextBoxColumn.HeaderText = "DATA_WAZNOSCI";
+            this.dATAWAZNOSCIDataGridViewTextBoxColumn.Name = "dATAWAZNOSCIDataGridViewTextBoxColumn";
+            // 
+            // kARNETYBindingSource
+            // 
+            this.kARNETYBindingSource.DataMember = "KARNETY";
+            this.kARNETYBindingSource.DataSource = this.strzelnicaDS;
             // 
             // tableLayoutPanel5
             // 
@@ -462,13 +725,47 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn1,
+            this.iMIEDataGridViewTextBoxColumn1,
+            this.nAZWISKODataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.tRENERZYBindingSource;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(833, 392);
             this.dataGridView2.TabIndex = 1;
+            // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // iMIEDataGridViewTextBoxColumn1
+            // 
+            this.iMIEDataGridViewTextBoxColumn1.DataPropertyName = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn1.HeaderText = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn1.Name = "iMIEDataGridViewTextBoxColumn1";
+            // 
+            // nAZWISKODataGridViewTextBoxColumn1
+            // 
+            this.nAZWISKODataGridViewTextBoxColumn1.DataPropertyName = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn1.HeaderText = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn1.Name = "nAZWISKODataGridViewTextBoxColumn1";
+            // 
+            // tRENERZYBindingSource
+            // 
+            this.tRENERZYBindingSource.DataMember = "TRENERZY";
+            this.tRENERZYBindingSource.DataSource = this.strzelnicaDS;
             // 
             // tableLayoutPanel4
             // 
@@ -490,7 +787,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(833, 42);
             this.tableLayoutPanel4.TabIndex = 0;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // TrDodaj
             // 
@@ -544,8 +840,16 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.iMIEDataGridViewTextBoxColumn,
+            this.nAZWISKODataGridViewTextBoxColumn,
+            this.iDKARNETUDataGridViewTextBoxColumn,
+            this.wIEKDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.kLIENCIBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -553,6 +857,46 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(833, 392);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMIEDataGridViewTextBoxColumn
+            // 
+            this.iMIEDataGridViewTextBoxColumn.DataPropertyName = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn.HeaderText = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn.Name = "iMIEDataGridViewTextBoxColumn";
+            this.iMIEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nAZWISKODataGridViewTextBoxColumn
+            // 
+            this.nAZWISKODataGridViewTextBoxColumn.DataPropertyName = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn.HeaderText = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn.Name = "nAZWISKODataGridViewTextBoxColumn";
+            this.nAZWISKODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDKARNETUDataGridViewTextBoxColumn
+            // 
+            this.iDKARNETUDataGridViewTextBoxColumn.DataPropertyName = "ID_KARNETU";
+            this.iDKARNETUDataGridViewTextBoxColumn.HeaderText = "ID_KARNETU";
+            this.iDKARNETUDataGridViewTextBoxColumn.Name = "iDKARNETUDataGridViewTextBoxColumn";
+            this.iDKARNETUDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // wIEKDataGridViewTextBoxColumn
+            // 
+            this.wIEKDataGridViewTextBoxColumn.DataPropertyName = "WIEK";
+            this.wIEKDataGridViewTextBoxColumn.HeaderText = "WIEK";
+            this.wIEKDataGridViewTextBoxColumn.Name = "wIEKDataGridViewTextBoxColumn";
+            this.wIEKDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kLIENCIBindingSource
+            // 
+            this.kLIENCIBindingSource.DataMember = "KLIENCI";
+            this.kLIENCIBindingSource.DataSource = this.strzelnicaDS;
             // 
             // tableLayoutPanel1
             // 
@@ -566,7 +910,7 @@
             this.tableLayoutPanel1.Controls.Add(this.KlDodaj, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.KlEdytuj, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.KlUsuń, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.KlOdśwież, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.KlUOdśwież, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 395);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -574,13 +918,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(833, 42);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // KlDodaj
             // 
             this.KlDodaj.Location = new System.Drawing.Point(86, 3);
             this.KlDodaj.Name = "KlDodaj";
-            this.KlDodaj.Size = new System.Drawing.Size(75, 23);
+            this.KlDodaj.Size = new System.Drawing.Size(106, 34);
             this.KlDodaj.TabIndex = 0;
             this.KlDodaj.Text = "Dodaj";
             this.KlDodaj.UseVisualStyleBackColor = true;
@@ -589,7 +932,7 @@
             // 
             this.KlEdytuj.Location = new System.Drawing.Point(252, 3);
             this.KlEdytuj.Name = "KlEdytuj";
-            this.KlEdytuj.Size = new System.Drawing.Size(75, 23);
+            this.KlEdytuj.Size = new System.Drawing.Size(106, 34);
             this.KlEdytuj.TabIndex = 1;
             this.KlEdytuj.Text = "Edytuj";
             this.KlEdytuj.UseVisualStyleBackColor = true;
@@ -598,19 +941,19 @@
             // 
             this.KlUsuń.Location = new System.Drawing.Point(584, 3);
             this.KlUsuń.Name = "KlUsuń";
-            this.KlUsuń.Size = new System.Drawing.Size(75, 23);
+            this.KlUsuń.Size = new System.Drawing.Size(106, 34);
             this.KlUsuń.TabIndex = 2;
             this.KlUsuń.Text = "Usuń";
             this.KlUsuń.UseVisualStyleBackColor = true;
             // 
-            // KlOdśwież
+            // KlUOdśwież
             // 
-            this.KlOdśwież.Location = new System.Drawing.Point(418, 3);
-            this.KlOdśwież.Name = "KlOdśwież";
-            this.KlOdśwież.Size = new System.Drawing.Size(75, 23);
-            this.KlOdśwież.TabIndex = 3;
-            this.KlOdśwież.Text = "Odśwież";
-            this.KlOdśwież.UseVisualStyleBackColor = true;
+            this.KlUOdśwież.Location = new System.Drawing.Point(418, 3);
+            this.KlUOdśwież.Name = "KlUOdśwież";
+            this.KlUOdśwież.Size = new System.Drawing.Size(106, 34);
+            this.KlUOdśwież.TabIndex = 3;
+            this.KlUOdśwież.Text = "Odśwież";
+            this.KlUOdśwież.UseVisualStyleBackColor = true;
             // 
             // tabControl
             // 
@@ -630,6 +973,30 @@
             this.tabControl.Size = new System.Drawing.Size(847, 473);
             this.tabControl.TabIndex = 0;
             // 
+            // kLIENCITableAdapter
+            // 
+            this.kLIENCITableAdapter.ClearBeforeFill = true;
+            // 
+            // tRENERZYTableAdapter
+            // 
+            this.tRENERZYTableAdapter.ClearBeforeFill = true;
+            // 
+            // kARNETYTableAdapter
+            // 
+            this.kARNETYTableAdapter.ClearBeforeFill = true;
+            // 
+            // sTANOWISKATableAdapter
+            // 
+            this.sTANOWISKATableAdapter.ClearBeforeFill = true;
+            // 
+            // bRONIETableAdapter
+            // 
+            this.bRONIETableAdapter.ClearBeforeFill = true;
+            // 
+            // wYPOZYCZENIATableAdapter
+            // 
+            this.wYPOZYCZENIATableAdapter.ClearBeforeFill = true;
+            // 
             // Strzelnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -638,24 +1005,31 @@
             this.Controls.Add(this.tabControl);
             this.Name = "Strzelnica";
             this.Text = "Strzelnica V1.0";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Strzelnica_Load_1);
             this.Wypożyczenia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wYPOZYCZENIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.Bronie.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bRONIEBindingSource)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.Stanowiska.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTANOWISKABindingSource)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.Karnety.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kARNETYBindingSource)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.Trenerzy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tRENERZYBindingSource)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.Klienci.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kLIENCIBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -710,7 +1084,49 @@
         private System.Windows.Forms.Button KlDodaj;
         private System.Windows.Forms.Button KlEdytuj;
         private System.Windows.Forms.Button KlUsuń;
-        private System.Windows.Forms.Button KlOdśwież;
+        private System.Windows.Forms.Button KlUOdśwież;
+        private StrzelnicaDS strzelnicaDS;
+        private System.Windows.Forms.BindingSource kLIENCIBindingSource;
+        private StrzelnicaDSTableAdapters.KLIENCITableAdapter kLIENCITableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMIEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAZWISKODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDKARNETUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wIEKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tRENERZYBindingSource;
+        private StrzelnicaDSTableAdapters.TRENERZYTableAdapter tRENERZYTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMIEDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAZWISKODataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource kARNETYBindingSource;
+        private StrzelnicaDSTableAdapters.KARNETYTableAdapter kARNETYTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rODZAJKARNETUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAWAZNOSCIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource sTANOWISKABindingSource;
+        private StrzelnicaDSTableAdapters.STANOWISKATableAdapter sTANOWISKATableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kULOCHWYTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oDLEGLOSCODCELUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cENAWYNAJMUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bRONIEBindingSource;
+        private StrzelnicaDSTableAdapters.BRONIETableAdapter bRONIETableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRODUCENTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mODELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tYPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aMUNICJADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cENAWYPOZYCZENIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource wYPOZYCZENIABindingSource;
+        private StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter wYPOZYCZENIATableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDKLIENTADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDTRENERADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDSTANOWISKADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDBRONIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAPOCZATEKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAKONIECDataGridViewTextBoxColumn;
     }
 }
 
