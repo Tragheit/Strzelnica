@@ -28,17 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.NKOk = new System.Windows.Forms.Button();
             this.DKDate = new System.Windows.Forms.DateTimePicker();
             this.DKNum = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.NKKlieLabel = new System.Windows.Forms.Label();
+            this.NKDataPoczLabel = new System.Windows.Forms.Label();
+            this.NKMiesLabel = new System.Windows.Forms.Label();
+            this.NKGrid = new System.Windows.Forms.DataGridView();
+            this.strzelnicaDS = new StrzelnicaDS();
+            this.kLIENCIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kLIENCITableAdapter = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMIEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAZWISKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DKNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NKGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kLIENCIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -52,12 +61,13 @@
             this.tableLayoutPanel1.Controls.Add(this.NKOk, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.DKDate, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.DKNum, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.listView1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.NKKlieLabel, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.NKDataPoczLabel, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.NKMiesLabel, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.NKGrid, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -65,82 +75,142 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 366);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // NKOk
             // 
-            this.NKOk.Location = new System.Drawing.Point(603, 304);
+            this.NKOk.Location = new System.Drawing.Point(452, 247);
+            this.NKOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NKOk.Name = "NKOk";
-            this.NKOk.Size = new System.Drawing.Size(95, 52);
+            this.NKOk.Size = new System.Drawing.Size(71, 42);
             this.NKOk.TabIndex = 0;
             this.NKOk.Text = "OK";
             this.NKOk.UseVisualStyleBackColor = true;
             // 
             // DKDate
             // 
-            this.DKDate.Location = new System.Drawing.Point(323, 175);
+            this.DKDate.Location = new System.Drawing.Point(242, 142);
+            this.DKDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DKDate.Name = "DKDate";
-            this.DKDate.Size = new System.Drawing.Size(200, 22);
+            this.DKDate.Size = new System.Drawing.Size(151, 20);
             this.DKDate.TabIndex = 1;
             // 
             // DKNum
             // 
-            this.DKNum.Location = new System.Drawing.Point(323, 304);
+            this.DKNum.Location = new System.Drawing.Point(242, 247);
+            this.DKNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DKNum.Name = "DKNum";
-            this.DKNum.Size = new System.Drawing.Size(120, 22);
+            this.DKNum.Size = new System.Drawing.Size(90, 20);
             this.DKNum.TabIndex = 2;
             // 
-            // label1
+            // NKKlieLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.NKKlieLabel.AutoSize = true;
+            this.NKKlieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NKKlieLabel.Location = new System.Drawing.Point(32, 35);
+            this.NKKlieLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NKKlieLabel.Name = "NKKlieLabel";
+            this.NKKlieLabel.Size = new System.Drawing.Size(48, 20);
+            this.NKKlieLabel.TabIndex = 4;
+            this.NKKlieLabel.Text = "Klient";
+            this.NKKlieLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // NKDataPoczLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.NKDataPoczLabel.AutoSize = true;
+            this.NKDataPoczLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NKDataPoczLabel.Location = new System.Drawing.Point(32, 140);
+            this.NKDataPoczLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NKDataPoczLabel.Name = "NKDataPoczLabel";
+            this.NKDataPoczLabel.Size = new System.Drawing.Size(114, 20);
+            this.NKDataPoczLabel.TabIndex = 5;
+            this.NKDataPoczLabel.Text = "Data Początek";
             // 
-            // label3
+            // NKMiesLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 301);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.NKMiesLabel.AutoSize = true;
+            this.NKMiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NKMiesLabel.Location = new System.Drawing.Point(32, 245);
+            this.NKMiesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NKMiesLabel.Name = "NKMiesLabel";
+            this.NKMiesLabel.Size = new System.Drawing.Size(106, 20);
+            this.NKMiesLabel.TabIndex = 6;
+            this.NKMiesLabel.Text = "Ilość Miesięcy";
             // 
-            // listView1
+            // NKGrid
             // 
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(323, 46);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(252, 97);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.NKGrid.AllowUserToAddRows = false;
+            this.NKGrid.AllowUserToDeleteRows = false;
+            this.NKGrid.AutoGenerateColumns = false;
+            this.NKGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.NKGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NKGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.iMIEDataGridViewTextBoxColumn,
+            this.nAZWISKODataGridViewTextBoxColumn});
+            this.NKGrid.DataSource = this.kLIENCIBindingSource;
+            this.NKGrid.Location = new System.Drawing.Point(243, 38);
+            this.NKGrid.Name = "NKGrid";
+            this.NKGrid.ReadOnly = true;
+            this.NKGrid.Size = new System.Drawing.Size(204, 99);
+            this.NKGrid.TabIndex = 7;
+            // 
+            // strzelnicaDS
+            // 
+            this.strzelnicaDS.DataSetName = "StrzelnicaDS";
+            this.strzelnicaDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kLIENCIBindingSource
+            // 
+            this.kLIENCIBindingSource.DataMember = "KLIENCI";
+            this.kLIENCIBindingSource.DataSource = this.strzelnicaDS;
+            // 
+            // kLIENCITableAdapter
+            // 
+            this.kLIENCITableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.FillWeight = 74.79438F;
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMIEDataGridViewTextBoxColumn
+            // 
+            this.iMIEDataGridViewTextBoxColumn.DataPropertyName = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn.FillWeight = 103.3782F;
+            this.iMIEDataGridViewTextBoxColumn.HeaderText = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn.Name = "iMIEDataGridViewTextBoxColumn";
+            this.iMIEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nAZWISKODataGridViewTextBoxColumn
+            // 
+            this.nAZWISKODataGridViewTextBoxColumn.DataPropertyName = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn.FillWeight = 121.8274F;
+            this.nAZWISKODataGridViewTextBoxColumn.HeaderText = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn.Name = "nAZWISKODataGridViewTextBoxColumn";
+            this.nAZWISKODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // NewKarnet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewKarnet";
             this.Text = "Dodaj Karnet";
+            this.Load += new System.EventHandler(this.NewKarnet_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DKNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NKGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kLIENCIBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,9 +221,15 @@
         private System.Windows.Forms.Button NKOk;
         private System.Windows.Forms.DateTimePicker DKDate;
         private System.Windows.Forms.NumericUpDown DKNum;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label NKKlieLabel;
+        private System.Windows.Forms.Label NKDataPoczLabel;
+        private System.Windows.Forms.Label NKMiesLabel;
+        private System.Windows.Forms.DataGridView NKGrid;
+        private StrzelnicaDS strzelnicaDS;
+        private System.Windows.Forms.BindingSource kLIENCIBindingSource;
+        private StrzelnicaDSTableAdapters.KLIENCITableAdapter kLIENCITableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMIEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAZWISKODataGridViewTextBoxColumn;
     }
 }

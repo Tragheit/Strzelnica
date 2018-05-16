@@ -26,6 +26,19 @@ namespace Strzelnica
         {
             
 
+
+        }
+
+        private void NewKarnet_Load(object sender, EventArgs e)
+        {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
+            this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

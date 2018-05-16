@@ -58,6 +58,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewBron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewBron.Designer.cs">
+      <DependentUpon>NewBron.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewKarnet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +76,23 @@
     <Compile Include="NewKlient.Designer.cs">
       <DependentUpon>NewKlient.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewStan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewStan.Designer.cs">
+      <DependentUpon>NewStan.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewTrainer.Designer.cs">
       <DependentUpon>NewTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewWypo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewWypo.Designer.cs">
+      <DependentUpon>NewWypo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,14 +104,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewBron.resx">
+      <DependentUpon>NewBron.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewKarnet.resx">
       <DependentUpon>NewKarnet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewKlient.resx">
       <DependentUpon>NewKlient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewStan.resx">
+      <DependentUpon>NewStan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewTrainer.resx">
       <DependentUpon>NewTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewWypo.resx">
+      <DependentUpon>NewWypo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

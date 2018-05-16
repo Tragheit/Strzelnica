@@ -10,54 +10,29 @@ using System.Windows.Forms;
 
 namespace Strzelnica
 {
-    public partial class Strzelnica : Form
+    public partial class NewWypo : Form
     {
-        
-        public Strzelnica()
+        public NewWypo()
         {
             InitializeComponent();
         }
 
-        private void Strzelnica_Load(object sender, EventArgs e)
-        { }
-
-        private void Strzelnica_Load_1(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.WYPOZYCZENIA' . Możesz go przenieść lub usunąć.
-            this.wYPOZYCZENIATableAdapter.Fill(this.strzelnicaDS.WYPOZYCZENIA);
+
+        }
+
+        private void NewWypo_Load(object sender, EventArgs e)
+        {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.BRONIE' . Możesz go przenieść lub usunąć.
             this.bRONIETableAdapter.Fill(this.strzelnicaDS.BRONIE);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.STANOWISKA' . Możesz go przenieść lub usunąć.
             this.sTANOWISKATableAdapter.Fill(this.strzelnicaDS.STANOWISKA);
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KARNETY' . Możesz go przenieść lub usunąć.
-            this.kARNETYTableAdapter.Fill(this.strzelnicaDS.KARNETY);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.TRENERZY' . Możesz go przenieść lub usunąć.
             this.tRENERZYTableAdapter.Fill(this.strzelnicaDS.TRENERZY);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
             this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
 
-
         }
-
-        private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void KlDodaj_Click(object sender, EventArgs e)
-        {
-            NewKlient form = new NewKlient();
-            form.Show();
-        }
-
-
-
-        
     }
-    }
-
+}
