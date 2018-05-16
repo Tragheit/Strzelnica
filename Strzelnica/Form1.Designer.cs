@@ -234,6 +234,7 @@
             this.iDKLIENTADataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.iDKLIENTADataGridViewTextBoxColumn.HeaderText = "ID_KLIENTA";
             this.iDKLIENTADataGridViewTextBoxColumn.Name = "iDKLIENTADataGridViewTextBoxColumn";
+            this.iDKLIENTADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDTRENERADataGridViewTextBoxColumn
             // 
@@ -241,6 +242,7 @@
             this.iDTRENERADataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.iDTRENERADataGridViewTextBoxColumn.HeaderText = "ID_TRENERA";
             this.iDTRENERADataGridViewTextBoxColumn.Name = "iDTRENERADataGridViewTextBoxColumn";
+            this.iDTRENERADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDSTANOWISKADataGridViewTextBoxColumn
             // 
@@ -248,6 +250,7 @@
             this.iDSTANOWISKADataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.iDSTANOWISKADataGridViewTextBoxColumn.HeaderText = "ID_STANOWISKA";
             this.iDSTANOWISKADataGridViewTextBoxColumn.Name = "iDSTANOWISKADataGridViewTextBoxColumn";
+            this.iDSTANOWISKADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDBRONIDataGridViewTextBoxColumn
             // 
@@ -255,6 +258,7 @@
             this.iDBRONIDataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.iDBRONIDataGridViewTextBoxColumn.HeaderText = "ID_BRONI";
             this.iDBRONIDataGridViewTextBoxColumn.Name = "iDBRONIDataGridViewTextBoxColumn";
+            this.iDBRONIDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn
             // 
@@ -262,6 +266,7 @@
             this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.HeaderText = "ILOSC_PAKIETOW_AMUNICJI";
             this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.Name = "iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn";
+            this.iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dATAPOCZATEKDataGridViewTextBoxColumn
             // 
@@ -269,6 +274,7 @@
             this.dATAPOCZATEKDataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.dATAPOCZATEKDataGridViewTextBoxColumn.HeaderText = "DATA_POCZATEK";
             this.dATAPOCZATEKDataGridViewTextBoxColumn.Name = "dATAPOCZATEKDataGridViewTextBoxColumn";
+            this.dATAPOCZATEKDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dATAKONIECDataGridViewTextBoxColumn
             // 
@@ -276,6 +282,7 @@
             this.dATAKONIECDataGridViewTextBoxColumn.FillWeight = 108.4844F;
             this.dATAKONIECDataGridViewTextBoxColumn.HeaderText = "DATA_KONIEC";
             this.dATAKONIECDataGridViewTextBoxColumn.Name = "dATAKONIECDataGridViewTextBoxColumn";
+            this.dATAKONIECDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // wYPOZYCZENIABindingSource
             // 
@@ -382,6 +389,7 @@
             // iDDataGridViewTextBoxColumn4
             // 
             this.iDDataGridViewTextBoxColumn4.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn4.FillWeight = 60.9137F;
             this.iDDataGridViewTextBoxColumn4.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn4.Name = "iDDataGridViewTextBoxColumn4";
             this.iDDataGridViewTextBoxColumn4.ReadOnly = true;
@@ -389,32 +397,42 @@
             // pRODUCENTDataGridViewTextBoxColumn
             // 
             this.pRODUCENTDataGridViewTextBoxColumn.DataPropertyName = "PRODUCENT";
+            this.pRODUCENTDataGridViewTextBoxColumn.FillWeight = 107.8173F;
             this.pRODUCENTDataGridViewTextBoxColumn.HeaderText = "PRODUCENT";
             this.pRODUCENTDataGridViewTextBoxColumn.Name = "pRODUCENTDataGridViewTextBoxColumn";
+            this.pRODUCENTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mODELDataGridViewTextBoxColumn
             // 
             this.mODELDataGridViewTextBoxColumn.DataPropertyName = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.FillWeight = 107.8173F;
             this.mODELDataGridViewTextBoxColumn.HeaderText = "MODEL";
             this.mODELDataGridViewTextBoxColumn.Name = "mODELDataGridViewTextBoxColumn";
+            this.mODELDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tYPDataGridViewTextBoxColumn
             // 
             this.tYPDataGridViewTextBoxColumn.DataPropertyName = "TYP";
+            this.tYPDataGridViewTextBoxColumn.FillWeight = 107.8173F;
             this.tYPDataGridViewTextBoxColumn.HeaderText = "TYP";
             this.tYPDataGridViewTextBoxColumn.Name = "tYPDataGridViewTextBoxColumn";
+            this.tYPDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // aMUNICJADataGridViewTextBoxColumn
             // 
             this.aMUNICJADataGridViewTextBoxColumn.DataPropertyName = "AMUNICJA";
+            this.aMUNICJADataGridViewTextBoxColumn.FillWeight = 107.8173F;
             this.aMUNICJADataGridViewTextBoxColumn.HeaderText = "AMUNICJA";
             this.aMUNICJADataGridViewTextBoxColumn.Name = "aMUNICJADataGridViewTextBoxColumn";
+            this.aMUNICJADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cENAWYPOZYCZENIADataGridViewTextBoxColumn
             // 
             this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.DataPropertyName = "CENA_WYPOZYCZENIA";
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.FillWeight = 107.8173F;
             this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.HeaderText = "CENA_WYPOZYCZENIA";
             this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.Name = "cENAWYPOZYCZENIADataGridViewTextBoxColumn";
+            this.cENAWYPOZYCZENIADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bRONIEBindingSource
             // 
@@ -514,6 +532,7 @@
             // iDDataGridViewTextBoxColumn3
             // 
             this.iDDataGridViewTextBoxColumn3.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn3.FillWeight = 40.60914F;
             this.iDDataGridViewTextBoxColumn3.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn3.Name = "iDDataGridViewTextBoxColumn3";
             this.iDDataGridViewTextBoxColumn3.ReadOnly = true;
@@ -521,20 +540,26 @@
             // kULOCHWYTDataGridViewTextBoxColumn
             // 
             this.kULOCHWYTDataGridViewTextBoxColumn.DataPropertyName = "KULOCHWYT";
+            this.kULOCHWYTDataGridViewTextBoxColumn.FillWeight = 119.797F;
             this.kULOCHWYTDataGridViewTextBoxColumn.HeaderText = "KULOCHWYT";
             this.kULOCHWYTDataGridViewTextBoxColumn.Name = "kULOCHWYTDataGridViewTextBoxColumn";
+            this.kULOCHWYTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // oDLEGLOSCODCELUDataGridViewTextBoxColumn
             // 
             this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.DataPropertyName = "ODLEGLOSC_OD_CELU";
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.FillWeight = 119.797F;
             this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.HeaderText = "ODLEGLOSC_OD_CELU";
             this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.Name = "oDLEGLOSCODCELUDataGridViewTextBoxColumn";
+            this.oDLEGLOSCODCELUDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cENAWYNAJMUDataGridViewTextBoxColumn
             // 
             this.cENAWYNAJMUDataGridViewTextBoxColumn.DataPropertyName = "CENA_WYNAJMU";
+            this.cENAWYNAJMUDataGridViewTextBoxColumn.FillWeight = 119.797F;
             this.cENAWYNAJMUDataGridViewTextBoxColumn.HeaderText = "CENA_WYNAJMU";
             this.cENAWYNAJMUDataGridViewTextBoxColumn.Name = "cENAWYNAJMUDataGridViewTextBoxColumn";
+            this.cENAWYNAJMUDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sTANOWISKABindingSource
             // 
@@ -642,12 +667,14 @@
             this.rODZAJKARNETUDataGridViewTextBoxColumn.DataPropertyName = "RODZAJ_KARNETU";
             this.rODZAJKARNETUDataGridViewTextBoxColumn.HeaderText = "RODZAJ_KARNETU";
             this.rODZAJKARNETUDataGridViewTextBoxColumn.Name = "rODZAJKARNETUDataGridViewTextBoxColumn";
+            this.rODZAJKARNETUDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dATAWAZNOSCIDataGridViewTextBoxColumn
             // 
             this.dATAWAZNOSCIDataGridViewTextBoxColumn.DataPropertyName = "DATA_WAZNOSCI";
             this.dATAWAZNOSCIDataGridViewTextBoxColumn.HeaderText = "DATA_WAZNOSCI";
             this.dATAWAZNOSCIDataGridViewTextBoxColumn.Name = "dATAWAZNOSCIDataGridViewTextBoxColumn";
+            this.dATAWAZNOSCIDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kARNETYBindingSource
             // 
@@ -755,12 +782,14 @@
             this.iMIEDataGridViewTextBoxColumn1.DataPropertyName = "IMIE";
             this.iMIEDataGridViewTextBoxColumn1.HeaderText = "IMIE";
             this.iMIEDataGridViewTextBoxColumn1.Name = "iMIEDataGridViewTextBoxColumn1";
+            this.iMIEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // nAZWISKODataGridViewTextBoxColumn1
             // 
             this.nAZWISKODataGridViewTextBoxColumn1.DataPropertyName = "NAZWISKO";
             this.nAZWISKODataGridViewTextBoxColumn1.HeaderText = "NAZWISKO";
             this.nAZWISKODataGridViewTextBoxColumn1.Name = "nAZWISKODataGridViewTextBoxColumn1";
+            this.nAZWISKODataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // tRENERZYBindingSource
             // 
@@ -857,10 +886,12 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(833, 392);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.FillWeight = 50.76142F;
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
@@ -868,6 +899,7 @@
             // iMIEDataGridViewTextBoxColumn
             // 
             this.iMIEDataGridViewTextBoxColumn.DataPropertyName = "IMIE";
+            this.iMIEDataGridViewTextBoxColumn.FillWeight = 105.0326F;
             this.iMIEDataGridViewTextBoxColumn.HeaderText = "IMIE";
             this.iMIEDataGridViewTextBoxColumn.Name = "iMIEDataGridViewTextBoxColumn";
             this.iMIEDataGridViewTextBoxColumn.ReadOnly = true;
@@ -875,6 +907,7 @@
             // nAZWISKODataGridViewTextBoxColumn
             // 
             this.nAZWISKODataGridViewTextBoxColumn.DataPropertyName = "NAZWISKO";
+            this.nAZWISKODataGridViewTextBoxColumn.FillWeight = 180.4595F;
             this.nAZWISKODataGridViewTextBoxColumn.HeaderText = "NAZWISKO";
             this.nAZWISKODataGridViewTextBoxColumn.Name = "nAZWISKODataGridViewTextBoxColumn";
             this.nAZWISKODataGridViewTextBoxColumn.ReadOnly = true;
@@ -882,6 +915,7 @@
             // iDKARNETUDataGridViewTextBoxColumn
             // 
             this.iDKARNETUDataGridViewTextBoxColumn.DataPropertyName = "ID_KARNETU";
+            this.iDKARNETUDataGridViewTextBoxColumn.FillWeight = 98.32548F;
             this.iDKARNETUDataGridViewTextBoxColumn.HeaderText = "ID_KARNETU";
             this.iDKARNETUDataGridViewTextBoxColumn.Name = "iDKARNETUDataGridViewTextBoxColumn";
             this.iDKARNETUDataGridViewTextBoxColumn.ReadOnly = true;
@@ -889,6 +923,7 @@
             // wIEKDataGridViewTextBoxColumn
             // 
             this.wIEKDataGridViewTextBoxColumn.DataPropertyName = "WIEK";
+            this.wIEKDataGridViewTextBoxColumn.FillWeight = 65.42093F;
             this.wIEKDataGridViewTextBoxColumn.HeaderText = "WIEK";
             this.wIEKDataGridViewTextBoxColumn.Name = "wIEKDataGridViewTextBoxColumn";
             this.wIEKDataGridViewTextBoxColumn.ReadOnly = true;
@@ -927,6 +962,7 @@
             this.KlDodaj.TabIndex = 0;
             this.KlDodaj.Text = "Dodaj";
             this.KlDodaj.UseVisualStyleBackColor = true;
+            this.KlDodaj.Click += new System.EventHandler(this.KlDodaj_Click);
             // 
             // KlEdytuj
             // 
@@ -1088,11 +1124,6 @@
         private StrzelnicaDS strzelnicaDS;
         private System.Windows.Forms.BindingSource kLIENCIBindingSource;
         private StrzelnicaDSTableAdapters.KLIENCITableAdapter kLIENCITableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iMIEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nAZWISKODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDKARNETUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wIEKDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource tRENERZYBindingSource;
         private StrzelnicaDSTableAdapters.TRENERZYTableAdapter tRENERZYTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
@@ -1105,18 +1136,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dATAWAZNOSCIDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sTANOWISKABindingSource;
         private StrzelnicaDSTableAdapters.STANOWISKATableAdapter sTANOWISKATableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kULOCHWYTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oDLEGLOSCODCELUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cENAWYNAJMUDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bRONIEBindingSource;
         private StrzelnicaDSTableAdapters.BRONIETableAdapter bRONIETableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pRODUCENTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mODELDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tYPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aMUNICJADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cENAWYPOZYCZENIADataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource wYPOZYCZENIABindingSource;
         private StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter wYPOZYCZENIATableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn5;
@@ -1127,6 +1148,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iLOSCPAKIETOWAMUNICJIDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATAPOCZATEKDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATAKONIECDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRODUCENTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mODELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tYPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aMUNICJADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cENAWYPOZYCZENIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kULOCHWYTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oDLEGLOSCODCELUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cENAWYNAJMUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iMIEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAZWISKODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDKARNETUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wIEKDataGridViewTextBoxColumn;
     }
 }
 

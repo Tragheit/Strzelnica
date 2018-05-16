@@ -43,6 +43,17 @@ namespace Strzelnica
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void KlDodaj_Click(object sender, EventArgs e)
+        {
+            NewKlient form = new NewKlient();
+            form.Show();
+        }
     }
     }
 
