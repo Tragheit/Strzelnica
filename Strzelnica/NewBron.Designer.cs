@@ -40,15 +40,15 @@
             this.NBTypGrid = new System.Windows.Forms.DataGridView();
             this.nAZWADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bRONIETYPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.strzelnicaDS = new Strzelnica.StrzelnicaDS();
+            this.strzelnicaDS = new StrzelnicaDS();
             this.NBAmuGrid = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kALIBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aMUNICJABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.NBOk = new System.Windows.Forms.Button();
             this.NBCenaNum = new System.Windows.Forms.NumericUpDown();
-            this.bRONIE_TYPTableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.BRONIE_TYPTableAdapter();
-            this.aMUNICJATableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.AMUNICJATableAdapter();
+            this.bRONIE_TYPTableAdapter = new StrzelnicaDSTableAdapters.BRONIE_TYPTableAdapter();
+            this.aMUNICJATableAdapter = new StrzelnicaDSTableAdapters.AMUNICJATableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NBTypGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bRONIETYPBindingSource)).BeginInit();

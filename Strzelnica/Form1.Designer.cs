@@ -44,7 +44,7 @@
             this.dATAPOCZATEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATAKONIECDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wYPOZYCZENIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.strzelnicaDS = new StrzelnicaDS();
+            this.strzelnicaDS = new Strzelnica.StrzelnicaDS();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.WypDodaj = new System.Windows.Forms.Button();
             this.WypEdytuj = new System.Windows.Forms.Button();
@@ -112,12 +112,12 @@
             this.KlUsuń = new System.Windows.Forms.Button();
             this.KlOdśwież = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.kLIENCITableAdapter = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
-            this.tRENERZYTableAdapter = new StrzelnicaDSTableAdapters.TRENERZYTableAdapter();
-            this.kARNETYTableAdapter = new StrzelnicaDSTableAdapters.KARNETYTableAdapter();
-            this.sTANOWISKATableAdapter = new StrzelnicaDSTableAdapters.STANOWISKATableAdapter();
-            this.bRONIETableAdapter = new StrzelnicaDSTableAdapters.BRONIETableAdapter();
-            this.wYPOZYCZENIATableAdapter = new StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter();
+            this.kLIENCITableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.KLIENCITableAdapter();
+            this.tRENERZYTableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.TRENERZYTableAdapter();
+            this.kARNETYTableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.KARNETYTableAdapter();
+            this.sTANOWISKATableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.STANOWISKATableAdapter();
+            this.bRONIETableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.BRONIETableAdapter();
+            this.wYPOZYCZENIATableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter();
             this.Wypożyczenia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wYPOZYCZENIABindingSource)).BeginInit();
@@ -220,7 +220,6 @@
             this.dataGridView6.RowTemplate.Height = 24;
             this.dataGridView6.Size = new System.Drawing.Size(772, 374);
             this.dataGridView6.TabIndex = 2;
-            this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
             // 
             // iDDataGridViewTextBoxColumn5
             // 
@@ -349,6 +348,7 @@
             this.WypOdśwież.TabIndex = 3;
             this.WypOdśwież.Text = "Odśwież";
             this.WypOdśwież.UseVisualStyleBackColor = true;
+            this.WypOdśwież.Click += new System.EventHandler(this.refreshGridWyp);
             // 
             // WypUsuń
             // 
@@ -359,6 +359,7 @@
             this.WypUsuń.TabIndex = 4;
             this.WypUsuń.Text = "Usuń";
             this.WypUsuń.UseVisualStyleBackColor = true;
+            this.WypUsuń.Click += new System.EventHandler(this.RemoveWypozyczenie);
             // 
             // Bronie
             // 
@@ -503,7 +504,7 @@
             this.BrOdśwież.TabIndex = 3;
             this.BrOdśwież.Text = "Odśwież";
             this.BrOdśwież.UseVisualStyleBackColor = true;
-            
+            this.BrOdśwież.Click += new System.EventHandler(this.refreshGridBr);
             // 
             // BrUsuń
             // 
@@ -514,6 +515,7 @@
             this.BrUsuń.TabIndex = 4;
             this.BrUsuń.Text = "Usuń";
             this.BrUsuń.UseVisualStyleBackColor = true;
+            this.BrUsuń.Click += new System.EventHandler(this.RemoveBron);
             // 
             // Stanowiska
             // 
@@ -640,7 +642,7 @@
             this.StOdśwież.TabIndex = 3;
             this.StOdśwież.Text = "Odśwież";
             this.StOdśwież.UseVisualStyleBackColor = true;
-            
+            this.StOdśwież.Click += new System.EventHandler(this.refreshGridSt);
             // 
             // StUsuń
             // 
@@ -651,6 +653,7 @@
             this.StUsuń.TabIndex = 4;
             this.StUsuń.Text = "Usuń";
             this.StUsuń.UseVisualStyleBackColor = true;
+            this.StUsuń.Click += new System.EventHandler(this.RemoveStanowisko);
             // 
             // Karnety
             // 
@@ -765,6 +768,7 @@
             this.KaUsuń.TabIndex = 3;
             this.KaUsuń.Text = "Usuń";
             this.KaUsuń.UseVisualStyleBackColor = true;
+            this.KaUsuń.Click += new System.EventHandler(this.RemoveKarner);
             // 
             // KaOdśwież
             // 
@@ -775,7 +779,7 @@
             this.KaOdśwież.TabIndex = 4;
             this.KaOdśwież.Text = "Odświerz";
             this.KaOdśwież.UseVisualStyleBackColor = true;
-            
+            this.KaOdśwież.Click += new System.EventHandler(this.refreshGridKa);
             // 
             // Trenerzy
             // 
@@ -879,6 +883,7 @@
             this.TrUsuń.TabIndex = 2;
             this.TrUsuń.Text = "Usuń";
             this.TrUsuń.UseVisualStyleBackColor = true;
+            this.TrUsuń.Click += new System.EventHandler(this.RemoveTrener);
             // 
             // TrOdśwież
             // 
@@ -889,7 +894,7 @@
             this.TrOdśwież.TabIndex = 3;
             this.TrOdśwież.Text = "Odświerz";
             this.TrOdśwież.UseVisualStyleBackColor = true;
-         
+            this.TrOdśwież.Click += new System.EventHandler(this.refreshGridTr);
             // 
             // TrEdytuj
             // 
@@ -937,7 +942,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(772, 374);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -1068,7 +1072,6 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(784, 445);
             this.tabControl.TabIndex = 0;
-   
             // 
             // kLIENCITableAdapter
             // 

@@ -35,16 +35,6 @@ namespace Strzelnica
 
         }
 
-        private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void KlDodaj_Click(object sender, EventArgs e)
         {
             NewKlient NKlie = new NewKlient();
@@ -195,6 +185,56 @@ namespace Strzelnica
             {
                 int id = dataGridView1.SelectedCells[0].RowIndex;
                 strzelnicaEntities.KLIENCI.Remove(strzelnicaEntities.KLIENCI.Find(id));
+                strzelnicaEntities.SaveChanges();
+            }
+        }
+
+        public void RemoveTrener(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                int id = dataGridView2.SelectedCells[0].RowIndex;
+                strzelnicaEntities.TRENERZY.Remove(strzelnicaEntities.TRENERZY.Find(id));
+                strzelnicaEntities.SaveChanges();
+            }
+        }
+
+        public void RemoveKarner(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                int id = dataGridView3.SelectedCells[0].RowIndex;
+                strzelnicaEntities.KARNETY.Remove(strzelnicaEntities.KARNETY.Find(id));
+                strzelnicaEntities.SaveChanges();
+            }
+        }
+
+        public void RemoveStanowisko(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                int id = dataGridView4.SelectedCells[0].RowIndex;
+                strzelnicaEntities.STANOWISKA.Remove(strzelnicaEntities.STANOWISKA.Find(id));
+                strzelnicaEntities.SaveChanges();
+            }
+        }
+
+        public void RemoveBron(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                int id = dataGridView5.SelectedCells[0].RowIndex;
+                strzelnicaEntities.BRONIE.Remove(strzelnicaEntities.BRONIE.Find(id));
+                strzelnicaEntities.SaveChanges();
+            }
+        }
+
+        public void RemoveWypozyczenie(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                int id = dataGridView1.SelectedCells[0].RowIndex;
+                strzelnicaEntities.WYPOZYCZENIA.Remove(strzelnicaEntities.WYPOZYCZENIA.Find(id));
                 strzelnicaEntities.SaveChanges();
             }
         }

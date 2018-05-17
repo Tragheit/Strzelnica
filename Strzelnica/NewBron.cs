@@ -35,7 +35,7 @@ namespace Strzelnica
                     PRODUCENT = NBProdText.Text.ToUpper(),
                     MODEL = NBModText.Text.ToUpper(),
                     TYP = NBTypGrid.SelectedCells[0].RowIndex,
-                   // AMUNICJA = ,
+                    AMUNICJA = NBAmuGrid.SelectedCells[0].RowIndex,
                     CENA_WYPOZYCZENIA = NBCenaNum.Value 
 
                 };
