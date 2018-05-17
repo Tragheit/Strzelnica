@@ -25,5 +25,15 @@ namespace Strzelnica
             this.bRONIE_TYPTableAdapter.Fill(this.strzelnicaDS.BRONIE_TYP);
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NBAmuGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

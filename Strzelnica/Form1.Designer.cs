@@ -190,7 +190,7 @@
             this.Wypożyczenia.Margin = new System.Windows.Forms.Padding(2);
             this.Wypożyczenia.Name = "Wypożyczenia";
             this.Wypożyczenia.Padding = new System.Windows.Forms.Padding(2);
-            this.Wypożyczenia.Size = new System.Drawing.Size(627, 351);
+            this.Wypożyczenia.Size = new System.Drawing.Size(776, 412);
             this.Wypożyczenia.TabIndex = 5;
             this.Wypożyczenia.Text = "Wypożyczenia";
             this.Wypożyczenia.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
             this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(623, 313);
+            this.dataGridView6.Size = new System.Drawing.Size(772, 374);
             this.dataGridView6.TabIndex = 2;
             this.dataGridView6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellContentClick);
             // 
@@ -310,37 +310,39 @@
             this.tableLayoutPanel8.Controls.Add(this.WypOdśwież, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.WypUsuń, 4, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 315);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(623, 34);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(772, 34);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // WypDodaj
             // 
-            this.WypDodaj.Location = new System.Drawing.Point(64, 2);
+            this.WypDodaj.Location = new System.Drawing.Point(79, 2);
             this.WypDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.WypDodaj.Name = "WypDodaj";
             this.WypDodaj.Size = new System.Drawing.Size(80, 28);
             this.WypDodaj.TabIndex = 1;
             this.WypDodaj.Text = "Dodaj";
             this.WypDodaj.UseVisualStyleBackColor = true;
+            this.WypDodaj.Click += new System.EventHandler(this.WypDodaj_Click);
             // 
             // WypEdytuj
             // 
-            this.WypEdytuj.Location = new System.Drawing.Point(188, 2);
+            this.WypEdytuj.Location = new System.Drawing.Point(233, 2);
             this.WypEdytuj.Margin = new System.Windows.Forms.Padding(2);
             this.WypEdytuj.Name = "WypEdytuj";
             this.WypEdytuj.Size = new System.Drawing.Size(80, 28);
             this.WypEdytuj.TabIndex = 2;
             this.WypEdytuj.Text = "Edytuj";
             this.WypEdytuj.UseVisualStyleBackColor = true;
+            this.WypEdytuj.Click += new System.EventHandler(this.WypEdytuj_Click);
             // 
             // WypOdśwież
             // 
-            this.WypOdśwież.Location = new System.Drawing.Point(312, 2);
+            this.WypOdśwież.Location = new System.Drawing.Point(387, 2);
             this.WypOdśwież.Margin = new System.Windows.Forms.Padding(2);
             this.WypOdśwież.Name = "WypOdśwież";
             this.WypOdśwież.Size = new System.Drawing.Size(80, 28);
@@ -350,7 +352,7 @@
             // 
             // WypUsuń
             // 
-            this.WypUsuń.Location = new System.Drawing.Point(436, 2);
+            this.WypUsuń.Location = new System.Drawing.Point(541, 2);
             this.WypUsuń.Margin = new System.Windows.Forms.Padding(2);
             this.WypUsuń.Name = "WypUsuń";
             this.WypUsuń.Size = new System.Drawing.Size(80, 28);
@@ -366,7 +368,7 @@
             this.Bronie.Margin = new System.Windows.Forms.Padding(2);
             this.Bronie.Name = "Bronie";
             this.Bronie.Padding = new System.Windows.Forms.Padding(2);
-            this.Bronie.Size = new System.Drawing.Size(627, 351);
+            this.Bronie.Size = new System.Drawing.Size(776, 412);
             this.Bronie.TabIndex = 4;
             this.Bronie.Text = "Bronie";
             this.Bronie.UseVisualStyleBackColor = true;
@@ -392,7 +394,7 @@
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(623, 313);
+            this.dataGridView5.Size = new System.Drawing.Size(772, 374);
             this.dataGridView5.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn4
@@ -462,37 +464,39 @@
             this.tableLayoutPanel7.Controls.Add(this.BrOdśwież, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.BrUsuń, 4, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 315);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(623, 34);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(772, 34);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // BrDodaj
             // 
-            this.BrDodaj.Location = new System.Drawing.Point(64, 2);
+            this.BrDodaj.Location = new System.Drawing.Point(79, 2);
             this.BrDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.BrDodaj.Name = "BrDodaj";
             this.BrDodaj.Size = new System.Drawing.Size(80, 28);
             this.BrDodaj.TabIndex = 1;
             this.BrDodaj.Text = "Dodaj";
             this.BrDodaj.UseVisualStyleBackColor = true;
+            this.BrDodaj.Click += new System.EventHandler(this.BrDodaj_Click);
             // 
             // BrEdytuj
             // 
-            this.BrEdytuj.Location = new System.Drawing.Point(188, 2);
+            this.BrEdytuj.Location = new System.Drawing.Point(233, 2);
             this.BrEdytuj.Margin = new System.Windows.Forms.Padding(2);
             this.BrEdytuj.Name = "BrEdytuj";
             this.BrEdytuj.Size = new System.Drawing.Size(80, 28);
             this.BrEdytuj.TabIndex = 2;
             this.BrEdytuj.Text = "Edytuj";
             this.BrEdytuj.UseVisualStyleBackColor = true;
+            this.BrEdytuj.Click += new System.EventHandler(this.BrEdytuj_Click);
             // 
             // BrOdśwież
             // 
-            this.BrOdśwież.Location = new System.Drawing.Point(312, 2);
+            this.BrOdśwież.Location = new System.Drawing.Point(387, 2);
             this.BrOdśwież.Margin = new System.Windows.Forms.Padding(2);
             this.BrOdśwież.Name = "BrOdśwież";
             this.BrOdśwież.Size = new System.Drawing.Size(80, 28);
@@ -502,7 +506,7 @@
             // 
             // BrUsuń
             // 
-            this.BrUsuń.Location = new System.Drawing.Point(436, 2);
+            this.BrUsuń.Location = new System.Drawing.Point(541, 2);
             this.BrUsuń.Margin = new System.Windows.Forms.Padding(2);
             this.BrUsuń.Name = "BrUsuń";
             this.BrUsuń.Size = new System.Drawing.Size(80, 28);
@@ -518,7 +522,7 @@
             this.Stanowiska.Margin = new System.Windows.Forms.Padding(2);
             this.Stanowiska.Name = "Stanowiska";
             this.Stanowiska.Padding = new System.Windows.Forms.Padding(2);
-            this.Stanowiska.Size = new System.Drawing.Size(627, 351);
+            this.Stanowiska.Size = new System.Drawing.Size(776, 412);
             this.Stanowiska.TabIndex = 3;
             this.Stanowiska.Text = "Stanowiska";
             this.Stanowiska.UseVisualStyleBackColor = true;
@@ -542,7 +546,7 @@
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(623, 313);
+            this.dataGridView4.Size = new System.Drawing.Size(772, 374);
             this.dataGridView4.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn3
@@ -596,37 +600,39 @@
             this.tableLayoutPanel6.Controls.Add(this.StOdśwież, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.StUsuń, 4, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 315);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(623, 34);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(772, 34);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // StDodaj
             // 
-            this.StDodaj.Location = new System.Drawing.Point(64, 2);
+            this.StDodaj.Location = new System.Drawing.Point(79, 2);
             this.StDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.StDodaj.Name = "StDodaj";
             this.StDodaj.Size = new System.Drawing.Size(80, 28);
             this.StDodaj.TabIndex = 1;
             this.StDodaj.Text = "Dodaj";
             this.StDodaj.UseVisualStyleBackColor = true;
+            this.StDodaj.Click += new System.EventHandler(this.StDodaj_Click);
             // 
             // StEdytuj
             // 
-            this.StEdytuj.Location = new System.Drawing.Point(188, 2);
+            this.StEdytuj.Location = new System.Drawing.Point(233, 2);
             this.StEdytuj.Margin = new System.Windows.Forms.Padding(2);
             this.StEdytuj.Name = "StEdytuj";
             this.StEdytuj.Size = new System.Drawing.Size(80, 28);
             this.StEdytuj.TabIndex = 2;
             this.StEdytuj.Text = "Edytuj";
             this.StEdytuj.UseVisualStyleBackColor = true;
+            this.StEdytuj.Click += new System.EventHandler(this.StEdytuj_Click);
             // 
             // StOdśwież
             // 
-            this.StOdśwież.Location = new System.Drawing.Point(312, 2);
+            this.StOdśwież.Location = new System.Drawing.Point(387, 2);
             this.StOdśwież.Margin = new System.Windows.Forms.Padding(2);
             this.StOdśwież.Name = "StOdśwież";
             this.StOdśwież.Size = new System.Drawing.Size(80, 28);
@@ -636,7 +642,7 @@
             // 
             // StUsuń
             // 
-            this.StUsuń.Location = new System.Drawing.Point(436, 2);
+            this.StUsuń.Location = new System.Drawing.Point(541, 2);
             this.StUsuń.Margin = new System.Windows.Forms.Padding(2);
             this.StUsuń.Name = "StUsuń";
             this.StUsuń.Size = new System.Drawing.Size(80, 28);
@@ -652,7 +658,7 @@
             this.Karnety.Margin = new System.Windows.Forms.Padding(2);
             this.Karnety.Name = "Karnety";
             this.Karnety.Padding = new System.Windows.Forms.Padding(2);
-            this.Karnety.Size = new System.Drawing.Size(627, 351);
+            this.Karnety.Size = new System.Drawing.Size(776, 412);
             this.Karnety.TabIndex = 2;
             this.Karnety.Text = "Karnety";
             this.Karnety.UseVisualStyleBackColor = true;
@@ -675,7 +681,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(623, 313);
+            this.dataGridView3.Size = new System.Drawing.Size(772, 374);
             this.dataGridView3.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn2
@@ -718,37 +724,39 @@
             this.tableLayoutPanel5.Controls.Add(this.KaUsuń, 4, 0);
             this.tableLayoutPanel5.Controls.Add(this.KaOdśwież, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 315);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(623, 34);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(772, 34);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // KaDodaj
             // 
-            this.KaDodaj.Location = new System.Drawing.Point(64, 2);
+            this.KaDodaj.Location = new System.Drawing.Point(79, 2);
             this.KaDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.KaDodaj.Name = "KaDodaj";
             this.KaDodaj.Size = new System.Drawing.Size(80, 28);
             this.KaDodaj.TabIndex = 1;
             this.KaDodaj.Text = "Dodaj";
             this.KaDodaj.UseVisualStyleBackColor = true;
+            this.KaDodaj.Click += new System.EventHandler(this.KaDodaj_Click);
             // 
             // KaEdytuj
             // 
-            this.KaEdytuj.Location = new System.Drawing.Point(188, 2);
+            this.KaEdytuj.Location = new System.Drawing.Point(233, 2);
             this.KaEdytuj.Margin = new System.Windows.Forms.Padding(2);
             this.KaEdytuj.Name = "KaEdytuj";
             this.KaEdytuj.Size = new System.Drawing.Size(80, 28);
             this.KaEdytuj.TabIndex = 2;
             this.KaEdytuj.Text = "Edytuj";
             this.KaEdytuj.UseVisualStyleBackColor = true;
+            this.KaEdytuj.Click += new System.EventHandler(this.KaEdytuj_Click);
             // 
             // KaUsuń
             // 
-            this.KaUsuń.Location = new System.Drawing.Point(436, 2);
+            this.KaUsuń.Location = new System.Drawing.Point(541, 2);
             this.KaUsuń.Margin = new System.Windows.Forms.Padding(2);
             this.KaUsuń.Name = "KaUsuń";
             this.KaUsuń.Size = new System.Drawing.Size(80, 28);
@@ -758,7 +766,7 @@
             // 
             // KaOdśwież
             // 
-            this.KaOdśwież.Location = new System.Drawing.Point(312, 2);
+            this.KaOdśwież.Location = new System.Drawing.Point(387, 2);
             this.KaOdśwież.Margin = new System.Windows.Forms.Padding(2);
             this.KaOdśwież.Name = "KaOdśwież";
             this.KaOdśwież.Size = new System.Drawing.Size(80, 28);
@@ -774,7 +782,7 @@
             this.Trenerzy.Margin = new System.Windows.Forms.Padding(2);
             this.Trenerzy.Name = "Trenerzy";
             this.Trenerzy.Padding = new System.Windows.Forms.Padding(2);
-            this.Trenerzy.Size = new System.Drawing.Size(627, 351);
+            this.Trenerzy.Size = new System.Drawing.Size(776, 412);
             this.Trenerzy.TabIndex = 1;
             this.Trenerzy.Text = "Trenerzy";
             this.Trenerzy.UseVisualStyleBackColor = true;
@@ -797,7 +805,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(623, 313);
+            this.dataGridView2.Size = new System.Drawing.Size(772, 374);
             this.dataGridView2.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn1
@@ -840,27 +848,28 @@
             this.tableLayoutPanel4.Controls.Add(this.TrOdśwież, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.TrEdytuj, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 315);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(623, 34);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(772, 34);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // TrDodaj
             // 
-            this.TrDodaj.Location = new System.Drawing.Point(64, 2);
+            this.TrDodaj.Location = new System.Drawing.Point(79, 2);
             this.TrDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.TrDodaj.Name = "TrDodaj";
             this.TrDodaj.Size = new System.Drawing.Size(80, 28);
             this.TrDodaj.TabIndex = 1;
             this.TrDodaj.Text = "Dodaj";
             this.TrDodaj.UseVisualStyleBackColor = true;
+            this.TrDodaj.Click += new System.EventHandler(this.TrDodaj_Click);
             // 
             // TrUsuń
             // 
-            this.TrUsuń.Location = new System.Drawing.Point(436, 2);
+            this.TrUsuń.Location = new System.Drawing.Point(541, 2);
             this.TrUsuń.Margin = new System.Windows.Forms.Padding(2);
             this.TrUsuń.Name = "TrUsuń";
             this.TrUsuń.Size = new System.Drawing.Size(80, 28);
@@ -870,7 +879,7 @@
             // 
             // TrOdśwież
             // 
-            this.TrOdśwież.Location = new System.Drawing.Point(312, 2);
+            this.TrOdśwież.Location = new System.Drawing.Point(387, 2);
             this.TrOdśwież.Margin = new System.Windows.Forms.Padding(2);
             this.TrOdśwież.Name = "TrOdśwież";
             this.TrOdśwież.Size = new System.Drawing.Size(80, 28);
@@ -880,13 +889,14 @@
             // 
             // TrEdytuj
             // 
-            this.TrEdytuj.Location = new System.Drawing.Point(188, 2);
+            this.TrEdytuj.Location = new System.Drawing.Point(233, 2);
             this.TrEdytuj.Margin = new System.Windows.Forms.Padding(2);
             this.TrEdytuj.Name = "TrEdytuj";
             this.TrEdytuj.Size = new System.Drawing.Size(80, 28);
             this.TrEdytuj.TabIndex = 4;
             this.TrEdytuj.Text = "Edytuj";
             this.TrEdytuj.UseVisualStyleBackColor = true;
+            this.TrEdytuj.Click += new System.EventHandler(this.TrEdytuj_Click);
             // 
             // Klienci
             // 
@@ -896,7 +906,7 @@
             this.Klienci.Margin = new System.Windows.Forms.Padding(2);
             this.Klienci.Name = "Klienci";
             this.Klienci.Padding = new System.Windows.Forms.Padding(2);
-            this.Klienci.Size = new System.Drawing.Size(776, 528);
+            this.Klienci.Size = new System.Drawing.Size(776, 412);
             this.Klienci.TabIndex = 0;
             this.Klienci.Text = "Klienci";
             this.Klienci.UseVisualStyleBackColor = true;
@@ -921,7 +931,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 490);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 374);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -984,7 +994,7 @@
             this.tableLayoutPanel1.Controls.Add(this.KlUsuń, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.KlUOdśwież, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 492);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -1012,6 +1022,7 @@
             this.KlEdytuj.TabIndex = 1;
             this.KlEdytuj.Text = "Edytuj";
             this.KlEdytuj.UseVisualStyleBackColor = true;
+            this.KlEdytuj.Click += new System.EventHandler(this.KlEdytuj_Click);
             // 
             // KlUsuń
             // 
@@ -1049,7 +1060,7 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.Padding = new System.Drawing.Point(6, 6);
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(784, 561);
+            this.tabControl.Size = new System.Drawing.Size(784, 445);
             this.tabControl.TabIndex = 0;
             // 
             // kLIENCITableAdapter
@@ -1080,7 +1091,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 445);
             this.Controls.Add(this.tabControl);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Strzelnica";

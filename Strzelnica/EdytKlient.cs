@@ -10,39 +10,19 @@ using System.Windows.Forms;
 
 namespace Strzelnica
 {
-    public partial class NewKarnet : Form
+    public partial class EdytKlient : Form
     {
-        public NewKarnet()
+        public EdytKlient()
         {
             InitializeComponent();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void EdytKlient_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void loadList()
-        {
-            
-
-
-        }
-
-        private void NewKarnet_Load(object sender, EventArgs e)
-        {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KARNETY' . Możesz go przenieść lub usunąć.
+            this.kARNETYTableAdapter.Fill(this.strzelnicaDS.KARNETY);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
             this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NKGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

@@ -12,14 +12,11 @@ namespace Strzelnica
 {
     public partial class Strzelnica : Form
     {
-        
+
         public Strzelnica()
         {
             InitializeComponent();
         }
-
-        private void Strzelnica_Load(object sender, EventArgs e)
-        { }
 
         private void Strzelnica_Load_1(object sender, EventArgs e)
         {
@@ -36,7 +33,6 @@ namespace Strzelnica
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
             this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
 
-
         }
 
         private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,13 +47,77 @@ namespace Strzelnica
 
         private void KlDodaj_Click(object sender, EventArgs e)
         {
-            NewKlient form = new NewKlient();
-            form.Show();
+            NewKlient NKlie = new NewKlient();
+            NKlie.Show();
         }
 
+        private void TrDodaj_Click(object sender, EventArgs e)
+        {
+            NewTrainer NTrainer = new NewTrainer();
+            NTrainer.Show();
+        }
 
+        private void KaDodaj_Click(object sender, EventArgs e)
+        {
+            NewKarnet NKarnet = new NewKarnet();
+            NKarnet.Show();
+        }
 
-        
+        private void StDodaj_Click(object sender, EventArgs e)
+        {
+            NewStan NStano = new NewStan();
+            NStano.Show();
+        }
+
+        private void WypDodaj_Click(object sender, EventArgs e)
+        {
+            NewWypo nWypo = new NewWypo();
+            nWypo.Show();
+        }
+
+        private void BrDodaj_Click(object sender, EventArgs e)
+        {
+            NewBron NBron = new NewBron();
+            NBron.Show();
+        }
+
+        private void KlEdytuj_Click(object sender, EventArgs e)
+        {
+            EdytKlient EKlie = new EdytKlient();
+            EKlie.Show();
+        }
+
+        private void TrEdytuj_Click(object sender, EventArgs e)
+        {
+            EdytTrener ETren = new EdytTrener();
+            ETren.Show();
+        }
+
+        private void KaEdytuj_Click(object sender, EventArgs e)
+        {
+            EdytKarnet EKar = new EdytKarnet();
+            EKar.Show();
+        }
+
+        private void StEdytuj_Click(object sender, EventArgs e)
+        {
+            EdytStanowisko EStan = new EdytStanowisko();
+            EStan.Show();
+        }
+
+        private void BrEdytuj_Click(object sender, EventArgs e)
+        {
+            EdytBron EBron = new EdytBron();
+            EBron.Show();
+        }
+
+        private void WypEdytuj_Click(object sender, EventArgs e)
+        {
+            EdytWypo EWyp = new EdytWypo();
+            EWyp.Show();
+        }
+
     }
     }
+    
 

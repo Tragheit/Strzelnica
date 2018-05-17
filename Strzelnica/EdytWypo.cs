@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Strzelnica
 {
-    public partial class NewWypo : Form
+    public partial class EdytWypo : Form
     {
-        public NewWypo()
+        public EdytWypo()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NewWypo_Load(object sender, EventArgs e)
+        private void EdytWypo_Load(object sender, EventArgs e)
         {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.BRONIE' . Możesz go przenieść lub usunąć.
             this.bRONIETableAdapter.Fill(this.strzelnicaDS.BRONIE);
@@ -32,11 +27,6 @@ namespace Strzelnica
             this.tRENERZYTableAdapter.Fill(this.strzelnicaDS.TRENERZY);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
             this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
-
-        }
-
-        private void NWAmoNum_ValueChanged(object sender, EventArgs e)
-        {
 
         }
     }

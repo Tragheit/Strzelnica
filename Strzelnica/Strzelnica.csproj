@@ -52,6 +52,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EdytBron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytBron.Designer.cs">
+      <DependentUpon>EdytBron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytKarnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytKarnet.Designer.cs">
+      <DependentUpon>EdytKarnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytKlient.Designer.cs">
+      <DependentUpon>EdytKlient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytStanowisko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytStanowisko.Designer.cs">
+      <DependentUpon>EdytStanowisko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytTrener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytTrener.Designer.cs">
+      <DependentUpon>EdytTrener.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytWypo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytWypo.Designer.cs">
+      <DependentUpon>EdytWypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +137,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StrzelnicaDS.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EdytBron.resx">
+      <DependentUpon>EdytBron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytKarnet.resx">
+      <DependentUpon>EdytKarnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytKlient.resx">
+      <DependentUpon>EdytKlient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytStanowisko.resx">
+      <DependentUpon>EdytStanowisko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytTrener.resx">
+      <DependentUpon>EdytTrener.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytWypo.resx">
+      <DependentUpon>EdytWypo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
