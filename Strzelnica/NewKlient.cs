@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,9 +23,32 @@ namespace Strzelnica
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        public void insertNewKlient(object sender, EventArgs e)
         {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                KLIENCI Klient = new KLIENCI()
+                {
+                    IMIE = NKImieText.Text.ToUpper(),
+                    NAZWISKO = NKNazwiskoText.Text.ToUpper(),
+                    WIEK = (int)NKWiekNum.Value
+
+                };
+
+                strzelnicaEntities.KLIENCI.Add(Klient);
+                strzelnicaEntities.SaveChanges();
+            }
 
         }
-    }
-}
+
+            
+                //usuwanie
+             // strzelnicaEntitys.KLIENCI.Remove(strzelnicaEntitys.KLIENCI.Find(44));
+               // strzelnicaEntitys.SaveChanges();
+
+                                         
+
+            }
+ 
+        }
+   

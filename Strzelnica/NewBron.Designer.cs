@@ -40,15 +40,15 @@
             this.NBTypGrid = new System.Windows.Forms.DataGridView();
             this.nAZWADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bRONIETYPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.strzelnicaDS = new StrzelnicaDS();
+            this.strzelnicaDS = new Strzelnica.StrzelnicaDS();
             this.NBAmuGrid = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kALIBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aMUNICJABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.NBOk = new System.Windows.Forms.Button();
-            this.bRONIE_TYPTableAdapter = new StrzelnicaDSTableAdapters.BRONIE_TYPTableAdapter();
-            this.aMUNICJATableAdapter = new StrzelnicaDSTableAdapters.AMUNICJATableAdapter();
             this.NBCenaNum = new System.Windows.Forms.NumericUpDown();
+            this.bRONIE_TYPTableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.BRONIE_TYPTableAdapter();
+            this.aMUNICJATableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.AMUNICJATableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NBTypGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bRONIETYPBindingSource)).BeginInit();
@@ -90,7 +90,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.166667F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // NBProdLabel
             // 
@@ -207,7 +206,6 @@
             this.NBAmuGrid.ReadOnly = true;
             this.NBAmuGrid.Size = new System.Drawing.Size(339, 183);
             this.NBAmuGrid.TabIndex = 9;
-            this.NBAmuGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NBAmuGrid_CellContentClick);
             // 
             // ID
             // 
@@ -241,6 +239,13 @@
             this.NBOk.Text = "OK";
             this.NBOk.UseVisualStyleBackColor = false;
             // 
+            // NBCenaNum
+            // 
+            this.NBCenaNum.Location = new System.Drawing.Point(323, 394);
+            this.NBCenaNum.Name = "NBCenaNum";
+            this.NBCenaNum.Size = new System.Drawing.Size(180, 20);
+            this.NBCenaNum.TabIndex = 11;
+            // 
             // bRONIE_TYPTableAdapter
             // 
             this.bRONIE_TYPTableAdapter.ClearBeforeFill = true;
@@ -248,13 +253,6 @@
             // aMUNICJATableAdapter
             // 
             this.aMUNICJATableAdapter.ClearBeforeFill = true;
-            // 
-            // NBCenaNum
-            // 
-            this.NBCenaNum.Location = new System.Drawing.Point(323, 394);
-            this.NBCenaNum.Name = "NBCenaNum";
-            this.NBCenaNum.Size = new System.Drawing.Size(180, 20);
-            this.NBCenaNum.TabIndex = 11;
             // 
             // NewBron
             // 

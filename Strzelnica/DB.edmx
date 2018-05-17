@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StrzelnicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AMUNICJA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KALIBER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ILOSC_W_PAKIECIE" Type="int" Nullable="false" />
+          <Property Name="CENA_PAKIETU" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BRONIE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRODUCENT" Type="varchar" MaxLength="50" />
+          <Property Name="MODEL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TYP" Type="int" Nullable="false" />
+          <Property Name="AMUNICJA" Type="int" Nullable="false" />
+          <Property Name="CENA_WYPOZYCZENIA" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BRONIE_TYP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAZWA" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KARNETY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RODZAJ_KARNETU" Type="int" Nullable="false" />
+          <Property Name="DATA_WAZNOSCI" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KARNETY_RODZAJ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAZWA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PROCENT_ULGI" Type="int" Nullable="false" />
+          <Property Name="CENA_KARNETU" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KLIENCI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IMIE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NAZWISKO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_KARNETU" Type="int" />
+          <Property Name="WIEK" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KULOCHWYT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAZWA" Type="varchar" MaxLength="50" />
+          <Property Name="MATERIAL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="POZYCJA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MOBILNOSC" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="STANOWISKA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULOCHWYT" Type="int" Nullable="false" />
+          <Property Name="ODLEGLOSC_OD_CELU" Type="int" Nullable="false" />
+          <Property Name="CENA_WYNAJMU" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TRENERZY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IMIE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NAZWISKO" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WYPOZYCZENIA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_KLIENTA" Type="int" Nullable="false" />
+          <Property Name="ID_TRENERA" Type="int" />
+          <Property Name="ID_STANOWISKA" Type="int" Nullable="false" />
+          <Property Name="ID_BRONI" Type="int" Nullable="false" />
+          <Property Name="ILOSC_PAKIETOW_AMUNICJI" Type="int" />
+          <Property Name="DATA_POCZATEK" Type="smalldatetime" Nullable="false" />
+          <Property Name="DATA_KONIEC" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BRONIE_AMUNICJA1">
+          <End Role="AMUNICJA" Type="Self.AMUNICJA" Multiplicity="1" />
+          <End Role="BRONIE" Type="Self.BRONIE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AMUNICJA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BRONIE">
+              <PropertyRef Name="AMUNICJA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BRONIE_BRONIE_TYP1">
+          <End Role="BRONIE_TYP" Type="Self.BRONIE_TYP" Multiplicity="1" />
+          <End Role="BRONIE" Type="Self.BRONIE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BRONIE_TYP">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BRONIE">
+              <PropertyRef Name="TYP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KARNETY_KARNETY_RODZAJ1">
+          <End Role="KARNETY_RODZAJ" Type="Self.KARNETY_RODZAJ" Multiplicity="1" />
+          <End Role="KARNETY" Type="Self.KARNETY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KARNETY_RODZAJ">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KARNETY">
+              <PropertyRef Name="RODZAJ_KARNETU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KLIENCI_KARNETY1">
+          <End Role="KARNETY" Type="Self.KARNETY" Multiplicity="0..1" />
+          <End Role="KLIENCI" Type="Self.KLIENCI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KARNETY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KLIENCI">
+              <PropertyRef Name="ID_KARNETU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_BRONIE1">
+          <End Role="BRONIE" Type="Self.BRONIE" Multiplicity="1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BRONIE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_BRONI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_KLIENCI1">
+          <End Role="KLIENCI" Type="Self.KLIENCI" Multiplicity="1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KLIENCI">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_KLIENTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_STANOWISKA1">
+          <End Role="STANOWISKA" Type="Self.STANOWISKA" Multiplicity="1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STANOWISKA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_STANOWISKA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_TRENERZY1">
+          <End Role="TRENERZY" Type="Self.TRENERZY" Multiplicity="0..1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRENERZY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_TRENERA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="KULOCHWYTY">
+          <End Role="KULOCHWYT" Type="Self.KULOCHWYT" Multiplicity="1" />
+          <End Role="STANOWISKA" Type="Self.STANOWISKA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KULOCHWYT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="STANOWISKA">
+              <PropertyRef Name="KULOCHWYT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="StrzelnicaModelStoreContainer">
+          <EntitySet Name="AMUNICJA" EntityType="Self.AMUNICJA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BRONIE" EntityType="Self.BRONIE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BRONIE_TYP" EntityType="Self.BRONIE_TYP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KARNETY" EntityType="Self.KARNETY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KARNETY_RODZAJ" EntityType="Self.KARNETY_RODZAJ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KLIENCI" EntityType="Self.KLIENCI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KULOCHWYT" EntityType="Self.KULOCHWYT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="STANOWISKA" EntityType="Self.STANOWISKA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRENERZY" EntityType="Self.TRENERZY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WYPOZYCZENIA" EntityType="Self.WYPOZYCZENIA" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BRONIE_AMUNICJA1" Association="Self.FK_BRONIE_AMUNICJA1">
+            <End Role="AMUNICJA" EntitySet="AMUNICJA" />
+            <End Role="BRONIE" EntitySet="BRONIE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BRONIE_BRONIE_TYP1" Association="Self.FK_BRONIE_BRONIE_TYP1">
+            <End Role="BRONIE_TYP" EntitySet="BRONIE_TYP" />
+            <End Role="BRONIE" EntitySet="BRONIE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KARNETY_KARNETY_RODZAJ1" Association="Self.FK_KARNETY_KARNETY_RODZAJ1">
+            <End Role="KARNETY_RODZAJ" EntitySet="KARNETY_RODZAJ" />
+            <End Role="KARNETY" EntitySet="KARNETY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KLIENCI_KARNETY1" Association="Self.FK_KLIENCI_KARNETY1">
+            <End Role="KARNETY" EntitySet="KARNETY" />
+            <End Role="KLIENCI" EntitySet="KLIENCI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_BRONIE1" Association="Self.FK_WYPOŻYCZENIA_BRONIE1">
+            <End Role="BRONIE" EntitySet="BRONIE" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_KLIENCI1" Association="Self.FK_WYPOŻYCZENIA_KLIENCI1">
+            <End Role="KLIENCI" EntitySet="KLIENCI" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_STANOWISKA1" Association="Self.FK_WYPOŻYCZENIA_STANOWISKA1">
+            <End Role="STANOWISKA" EntitySet="STANOWISKA" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_TRENERZY1" Association="Self.FK_WYPOŻYCZENIA_TRENERZY1">
+            <End Role="TRENERZY" EntitySet="TRENERZY" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="KULOCHWYTY" Association="Self.KULOCHWYTY">
+            <End Role="KULOCHWYT" EntitySet="KULOCHWYT" />
+            <End Role="STANOWISKA" EntitySet="STANOWISKA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StrzelnicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AMUNICJA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KALIBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ILOSC_W_PAKIECIE" Type="Int32" Nullable="false" />
+          <Property Name="CENA_PAKIETU" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <NavigationProperty Name="BRONIE" Relationship="Self.FK_BRONIE_AMUNICJA1" FromRole="AMUNICJA" ToRole="BRONIE" />
+        </EntityType>
+        <EntityType Name="BRONIE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRODUCENT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MODEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TYP" Type="Int32" Nullable="false" />
+          <Property Name="AMUNICJA" Type="Int32" Nullable="false" />
+          <Property Name="CENA_WYPOZYCZENIA" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <NavigationProperty Name="AMUNICJA1" Relationship="Self.FK_BRONIE_AMUNICJA1" FromRole="BRONIE" ToRole="AMUNICJA" />
+          <NavigationProperty Name="BRONIE_TYP" Relationship="Self.FK_BRONIE_BRONIE_TYP1" FromRole="BRONIE" ToRole="BRONIE_TYP" />
+          <NavigationProperty Name="WYPOZYCZENIA" Relationship="Self.FK_WYPOŻYCZENIA_BRONIE1" FromRole="BRONIE" ToRole="WYPOZYCZENIA" />
+        </EntityType>
+        <EntityType Name="BRONIE_TYP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAZWA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BRONIE" Relationship="Self.FK_BRONIE_BRONIE_TYP1" FromRole="BRONIE_TYP" ToRole="BRONIE" />
+        </EntityType>
+        <EntityType Name="KARNETY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RODZAJ_KARNETU" Type="Int32" Nullable="false" />
+          <Property Name="DATA_WAZNOSCI" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="KARNETY_RODZAJ" Relationship="Self.FK_KARNETY_KARNETY_RODZAJ1" FromRole="KARNETY" ToRole="KARNETY_RODZAJ" />
+          <NavigationProperty Name="KLIENCI" Relationship="Self.FK_KLIENCI_KARNETY1" FromRole="KARNETY" ToRole="KLIENCI" />
+        </EntityType>
+        <EntityType Name="KARNETY_RODZAJ">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAZWA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PROCENT_ULGI" Type="Int32" Nullable="false" />
+          <Property Name="CENA_KARNETU" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <NavigationProperty Name="KARNETY" Relationship="Self.FK_KARNETY_KARNETY_RODZAJ1" FromRole="KARNETY_RODZAJ" ToRole="KARNETY" />
+        </EntityType>
+        <EntityType Name="KLIENCI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IMIE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAZWISKO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_KARNETU" Type="Int32" />
+          <Property Name="WIEK" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="KARNETY" Relationship="Self.FK_KLIENCI_KARNETY1" FromRole="KLIENCI" ToRole="KARNETY" />
+          <NavigationProperty Name="WYPOZYCZENIA" Relationship="Self.FK_WYPOŻYCZENIA_KLIENCI1" FromRole="KLIENCI" ToRole="WYPOZYCZENIA" />
+        </EntityType>
+        <EntityType Name="KULOCHWYT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAZWA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MATERIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="POZYCJA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOBILNOSC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="STANOWISKA" Relationship="Self.KULOCHWYTY" FromRole="KULOCHWYT" ToRole="STANOWISKA" />
+        </EntityType>
+        <EntityType Name="STANOWISKA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULOCHWYT" Type="Int32" Nullable="false" />
+          <Property Name="ODLEGLOSC_OD_CELU" Type="Int32" Nullable="false" />
+          <Property Name="CENA_WYNAJMU" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <NavigationProperty Name="KULOCHWYT1" Relationship="Self.KULOCHWYTY" FromRole="STANOWISKA" ToRole="KULOCHWYT" />
+          <NavigationProperty Name="WYPOZYCZENIA" Relationship="Self.FK_WYPOŻYCZENIA_STANOWISKA1" FromRole="STANOWISKA" ToRole="WYPOZYCZENIA" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TRENERZY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IMIE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAZWISKO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="WYPOZYCZENIA" Relationship="Self.FK_WYPOŻYCZENIA_TRENERZY1" FromRole="TRENERZY" ToRole="WYPOZYCZENIA" />
+        </EntityType>
+        <EntityType Name="WYPOZYCZENIA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_KLIENTA" Type="Int32" Nullable="false" />
+          <Property Name="ID_TRENERA" Type="Int32" />
+          <Property Name="ID_STANOWISKA" Type="Int32" Nullable="false" />
+          <Property Name="ID_BRONI" Type="Int32" Nullable="false" />
+          <Property Name="ILOSC_PAKIETOW_AMUNICJI" Type="Int32" />
+          <Property Name="DATA_POCZATEK" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DATA_KONIEC" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="BRONIE" Relationship="Self.FK_WYPOŻYCZENIA_BRONIE1" FromRole="WYPOZYCZENIA" ToRole="BRONIE" />
+          <NavigationProperty Name="KLIENCI" Relationship="Self.FK_WYPOŻYCZENIA_KLIENCI1" FromRole="WYPOZYCZENIA" ToRole="KLIENCI" />
+          <NavigationProperty Name="STANOWISKA" Relationship="Self.FK_WYPOŻYCZENIA_STANOWISKA1" FromRole="WYPOZYCZENIA" ToRole="STANOWISKA" />
+          <NavigationProperty Name="TRENERZY" Relationship="Self.FK_WYPOŻYCZENIA_TRENERZY1" FromRole="WYPOZYCZENIA" ToRole="TRENERZY" />
+        </EntityType>
+        <Association Name="FK_BRONIE_AMUNICJA1">
+          <End Role="AMUNICJA" Type="Self.AMUNICJA" Multiplicity="1" />
+          <End Role="BRONIE" Type="Self.BRONIE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AMUNICJA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BRONIE">
+              <PropertyRef Name="AMUNICJA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BRONIE_BRONIE_TYP1">
+          <End Role="BRONIE_TYP" Type="Self.BRONIE_TYP" Multiplicity="1" />
+          <End Role="BRONIE" Type="Self.BRONIE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BRONIE_TYP">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BRONIE">
+              <PropertyRef Name="TYP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_BRONIE1">
+          <End Role="BRONIE" Type="Self.BRONIE" Multiplicity="1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BRONIE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_BRONI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KARNETY_KARNETY_RODZAJ1">
+          <End Role="KARNETY_RODZAJ" Type="Self.KARNETY_RODZAJ" Multiplicity="1" />
+          <End Role="KARNETY" Type="Self.KARNETY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KARNETY_RODZAJ">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KARNETY">
+              <PropertyRef Name="RODZAJ_KARNETU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KLIENCI_KARNETY1">
+          <End Role="KARNETY" Type="Self.KARNETY" Multiplicity="0..1" />
+          <End Role="KLIENCI" Type="Self.KLIENCI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KARNETY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KLIENCI">
+              <PropertyRef Name="ID_KARNETU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_KLIENCI1">
+          <End Role="KLIENCI" Type="Self.KLIENCI" Multiplicity="1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KLIENCI">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_KLIENTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="KULOCHWYTY">
+          <End Role="KULOCHWYT" Type="Self.KULOCHWYT" Multiplicity="1" />
+          <End Role="STANOWISKA" Type="Self.STANOWISKA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KULOCHWYT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="STANOWISKA">
+              <PropertyRef Name="KULOCHWYT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_STANOWISKA1">
+          <End Role="STANOWISKA" Type="Self.STANOWISKA" Multiplicity="1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STANOWISKA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_STANOWISKA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WYPOŻYCZENIA_TRENERZY1">
+          <End Role="TRENERZY" Type="Self.TRENERZY" Multiplicity="0..1" />
+          <End Role="WYPOZYCZENIA" Type="Self.WYPOZYCZENIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRENERZY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WYPOZYCZENIA">
+              <PropertyRef Name="ID_TRENERA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="StrzelnicaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AMUNICJA" EntityType="Self.AMUNICJA" />
+          <EntitySet Name="BRONIE" EntityType="Self.BRONIE" />
+          <EntitySet Name="BRONIE_TYP" EntityType="Self.BRONIE_TYP" />
+          <EntitySet Name="KARNETY" EntityType="Self.KARNETY" />
+          <EntitySet Name="KARNETY_RODZAJ" EntityType="Self.KARNETY_RODZAJ" />
+          <EntitySet Name="KLIENCI" EntityType="Self.KLIENCI" />
+          <EntitySet Name="KULOCHWYT" EntityType="Self.KULOCHWYT" />
+          <EntitySet Name="STANOWISKA" EntityType="Self.STANOWISKA" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TRENERZY" EntityType="Self.TRENERZY" />
+          <EntitySet Name="WYPOZYCZENIA" EntityType="Self.WYPOZYCZENIA" />
+          <AssociationSet Name="FK_BRONIE_AMUNICJA1" Association="Self.FK_BRONIE_AMUNICJA1">
+            <End Role="AMUNICJA" EntitySet="AMUNICJA" />
+            <End Role="BRONIE" EntitySet="BRONIE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BRONIE_BRONIE_TYP1" Association="Self.FK_BRONIE_BRONIE_TYP1">
+            <End Role="BRONIE_TYP" EntitySet="BRONIE_TYP" />
+            <End Role="BRONIE" EntitySet="BRONIE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_BRONIE1" Association="Self.FK_WYPOŻYCZENIA_BRONIE1">
+            <End Role="BRONIE" EntitySet="BRONIE" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KARNETY_KARNETY_RODZAJ1" Association="Self.FK_KARNETY_KARNETY_RODZAJ1">
+            <End Role="KARNETY_RODZAJ" EntitySet="KARNETY_RODZAJ" />
+            <End Role="KARNETY" EntitySet="KARNETY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KLIENCI_KARNETY1" Association="Self.FK_KLIENCI_KARNETY1">
+            <End Role="KARNETY" EntitySet="KARNETY" />
+            <End Role="KLIENCI" EntitySet="KLIENCI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_KLIENCI1" Association="Self.FK_WYPOŻYCZENIA_KLIENCI1">
+            <End Role="KLIENCI" EntitySet="KLIENCI" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="KULOCHWYTY" Association="Self.KULOCHWYTY">
+            <End Role="KULOCHWYT" EntitySet="KULOCHWYT" />
+            <End Role="STANOWISKA" EntitySet="STANOWISKA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_STANOWISKA1" Association="Self.FK_WYPOŻYCZENIA_STANOWISKA1">
+            <End Role="STANOWISKA" EntitySet="STANOWISKA" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WYPOŻYCZENIA_TRENERZY1" Association="Self.FK_WYPOŻYCZENIA_TRENERZY1">
+            <End Role="TRENERZY" EntitySet="TRENERZY" />
+            <End Role="WYPOZYCZENIA" EntitySet="WYPOZYCZENIA" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(StrzelnicaModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(StrzelnicaModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StrzelnicaModelStoreContainer" CdmEntityContainer="StrzelnicaEntities">
+          <EntitySetMapping Name="AMUNICJA">
+            <EntityTypeMapping TypeName="StrzelnicaModel.AMUNICJA">
+              <MappingFragment StoreEntitySet="AMUNICJA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KALIBER" ColumnName="KALIBER" />
+                <ScalarProperty Name="ILOSC_W_PAKIECIE" ColumnName="ILOSC_W_PAKIECIE" />
+                <ScalarProperty Name="CENA_PAKIETU" ColumnName="CENA_PAKIETU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BRONIE">
+            <EntityTypeMapping TypeName="StrzelnicaModel.BRONIE">
+              <MappingFragment StoreEntitySet="BRONIE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PRODUCENT" ColumnName="PRODUCENT" />
+                <ScalarProperty Name="MODEL" ColumnName="MODEL" />
+                <ScalarProperty Name="TYP" ColumnName="TYP" />
+                <ScalarProperty Name="AMUNICJA" ColumnName="AMUNICJA" />
+                <ScalarProperty Name="CENA_WYPOZYCZENIA" ColumnName="CENA_WYPOZYCZENIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BRONIE_TYP">
+            <EntityTypeMapping TypeName="StrzelnicaModel.BRONIE_TYP">
+              <MappingFragment StoreEntitySet="BRONIE_TYP">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAZWA" ColumnName="NAZWA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KARNETY">
+            <EntityTypeMapping TypeName="StrzelnicaModel.KARNETY">
+              <MappingFragment StoreEntitySet="KARNETY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RODZAJ_KARNETU" ColumnName="RODZAJ_KARNETU" />
+                <ScalarProperty Name="DATA_WAZNOSCI" ColumnName="DATA_WAZNOSCI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KARNETY_RODZAJ">
+            <EntityTypeMapping TypeName="StrzelnicaModel.KARNETY_RODZAJ">
+              <MappingFragment StoreEntitySet="KARNETY_RODZAJ">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAZWA" ColumnName="NAZWA" />
+                <ScalarProperty Name="PROCENT_ULGI" ColumnName="PROCENT_ULGI" />
+                <ScalarProperty Name="CENA_KARNETU" ColumnName="CENA_KARNETU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KLIENCI">
+            <EntityTypeMapping TypeName="StrzelnicaModel.KLIENCI">
+              <MappingFragment StoreEntitySet="KLIENCI">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IMIE" ColumnName="IMIE" />
+                <ScalarProperty Name="NAZWISKO" ColumnName="NAZWISKO" />
+                <ScalarProperty Name="ID_KARNETU" ColumnName="ID_KARNETU" />
+                <ScalarProperty Name="WIEK" ColumnName="WIEK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KULOCHWYT">
+            <EntityTypeMapping TypeName="StrzelnicaModel.KULOCHWYT">
+              <MappingFragment StoreEntitySet="KULOCHWYT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAZWA" ColumnName="NAZWA" />
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="POZYCJA" ColumnName="POZYCJA" />
+                <ScalarProperty Name="MOBILNOSC" ColumnName="MOBILNOSC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STANOWISKA">
+            <EntityTypeMapping TypeName="StrzelnicaModel.STANOWISKA">
+              <MappingFragment StoreEntitySet="STANOWISKA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KULOCHWYT" ColumnName="KULOCHWYT" />
+                <ScalarProperty Name="ODLEGLOSC_OD_CELU" ColumnName="ODLEGLOSC_OD_CELU" />
+                <ScalarProperty Name="CENA_WYNAJMU" ColumnName="CENA_WYNAJMU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="StrzelnicaModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRENERZY">
+            <EntityTypeMapping TypeName="StrzelnicaModel.TRENERZY">
+              <MappingFragment StoreEntitySet="TRENERZY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IMIE" ColumnName="IMIE" />
+                <ScalarProperty Name="NAZWISKO" ColumnName="NAZWISKO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WYPOZYCZENIA">
+            <EntityTypeMapping TypeName="StrzelnicaModel.WYPOZYCZENIA">
+              <MappingFragment StoreEntitySet="WYPOZYCZENIA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_KLIENTA" ColumnName="ID_KLIENTA" />
+                <ScalarProperty Name="ID_TRENERA" ColumnName="ID_TRENERA" />
+                <ScalarProperty Name="ID_STANOWISKA" ColumnName="ID_STANOWISKA" />
+                <ScalarProperty Name="ID_BRONI" ColumnName="ID_BRONI" />
+                <ScalarProperty Name="ILOSC_PAKIETOW_AMUNICJI" ColumnName="ILOSC_PAKIETOW_AMUNICJI" />
+                <ScalarProperty Name="DATA_POCZATEK" ColumnName="DATA_POCZATEK" />
+                <ScalarProperty Name="DATA_KONIEC" ColumnName="DATA_KONIEC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="StrzelnicaModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="StrzelnicaModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="StrzelnicaModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="StrzelnicaModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StrzelnicaModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="StrzelnicaModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StrzelnicaModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StrzelnicaModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StrzelnicaModel.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

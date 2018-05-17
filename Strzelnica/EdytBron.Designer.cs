@@ -33,30 +33,30 @@
             this.EBAmuLabel = new System.Windows.Forms.Label();
             this.EBProdLabel = new System.Windows.Forms.Label();
             this.EBModLabel = new System.Windows.Forms.Label();
-            this.EBTypLabel = new System.Windows.Forms.Label();
             this.EBCenalabel = new System.Windows.Forms.Label();
+            this.EBTypLabel = new System.Windows.Forms.Label();
             this.EBAmuGrid = new System.Windows.Forms.DataGridView();
-            this.EBCenaNum = new System.Windows.Forms.NumericUpDown();
-            this.EBProdText = new System.Windows.Forms.TextBox();
-            this.EBModText = new System.Windows.Forms.TextBox();
-            this.EBTypGrid = new System.Windows.Forms.DataGridView();
-            this.EBOk = new System.Windows.Forms.Button();
-            this.strzelnicaDS = new StrzelnicaDS();
-            this.aMUNICJABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aMUNICJATableAdapter = new StrzelnicaDSTableAdapters.AMUNICJATableAdapter();
-            this.bRONIETYPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bRONIE_TYPTableAdapter = new StrzelnicaDSTableAdapters.BRONIE_TYPTableAdapter();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nAZWADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kALIBERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iLOSCWPAKIECIEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aMUNICJABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.strzelnicaDS = new StrzelnicaDS();
+            this.EBCenaNum = new System.Windows.Forms.NumericUpDown();
+            this.EBModText = new System.Windows.Forms.TextBox();
+            this.EBTypGrid = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAZWADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bRONIETYPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EBOk = new System.Windows.Forms.Button();
+            this.EBProdText = new System.Windows.Forms.TextBox();
+            this.aMUNICJATableAdapter = new StrzelnicaDSTableAdapters.AMUNICJATableAdapter();
+            this.bRONIE_TYPTableAdapter = new StrzelnicaDSTableAdapters.BRONIE_TYPTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EBAmuGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aMUNICJABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EBCenaNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EBTypGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aMUNICJABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bRONIETYPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,6 +124,16 @@
             this.EBModLabel.TabIndex = 2;
             this.EBModLabel.Text = "Model";
             // 
+            // EBCenalabel
+            // 
+            this.EBCenalabel.AutoSize = true;
+            this.EBCenalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EBCenalabel.Location = new System.Drawing.Point(287, 242);
+            this.EBCenalabel.Name = "EBCenalabel";
+            this.EBCenalabel.Size = new System.Drawing.Size(47, 20);
+            this.EBCenalabel.TabIndex = 4;
+            this.EBCenalabel.Text = "Cena";
+            // 
             // EBTypLabel
             // 
             this.EBTypLabel.AutoSize = true;
@@ -134,16 +144,6 @@
             this.EBTypLabel.TabIndex = 3;
             this.EBTypLabel.Text = "Typ";
             this.EBTypLabel.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // EBCenalabel
-            // 
-            this.EBCenalabel.AutoSize = true;
-            this.EBCenalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EBCenalabel.Location = new System.Drawing.Point(287, 242);
-            this.EBCenalabel.Name = "EBCenalabel";
-            this.EBCenalabel.Size = new System.Drawing.Size(47, 20);
-            this.EBCenalabel.TabIndex = 4;
-            this.EBCenalabel.Text = "Cena";
             // 
             // EBAmuGrid
             // 
@@ -166,19 +166,46 @@
             this.EBAmuGrid.TabIndex = 5;
             this.EBAmuGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EBAmuGrid_CellContentClick);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.FillWeight = 45.68528F;
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kALIBERDataGridViewTextBoxColumn
+            // 
+            this.kALIBERDataGridViewTextBoxColumn.DataPropertyName = "KALIBER";
+            this.kALIBERDataGridViewTextBoxColumn.FillWeight = 127.1574F;
+            this.kALIBERDataGridViewTextBoxColumn.HeaderText = "KALIBER";
+            this.kALIBERDataGridViewTextBoxColumn.Name = "kALIBERDataGridViewTextBoxColumn";
+            this.kALIBERDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iLOSCWPAKIECIEDataGridViewTextBoxColumn
+            // 
+            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.DataPropertyName = "ILOSC_W_PAKIECIE";
+            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.FillWeight = 127.1574F;
+            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.HeaderText = "ILOSC_W_PAKIECIE";
+            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.Name = "iLOSCWPAKIECIEDataGridViewTextBoxColumn";
+            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // aMUNICJABindingSource
+            // 
+            this.aMUNICJABindingSource.DataMember = "AMUNICJA";
+            this.aMUNICJABindingSource.DataSource = this.strzelnicaDS;
+            // 
+            // strzelnicaDS
+            // 
+            this.strzelnicaDS.DataSetName = "StrzelnicaDS";
+            this.strzelnicaDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // EBCenaNum
             // 
             this.EBCenaNum.Location = new System.Drawing.Point(287, 269);
             this.EBCenaNum.Name = "EBCenaNum";
             this.EBCenaNum.Size = new System.Drawing.Size(140, 20);
             this.EBCenaNum.TabIndex = 6;
-            // 
-            // EBProdText
-            // 
-            this.EBProdText.Location = new System.Drawing.Point(36, 194);
-            this.EBProdText.Name = "EBProdText";
-            this.EBProdText.Size = new System.Drawing.Size(140, 20);
-            this.EBProdText.TabIndex = 7;
             // 
             // EBModText
             // 
@@ -205,41 +232,6 @@
             this.EBTypGrid.Size = new System.Drawing.Size(245, 76);
             this.EBTypGrid.TabIndex = 9;
             // 
-            // EBOk
-            // 
-            this.EBOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.EBOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.EBOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EBOk.Location = new System.Drawing.Point(535, 305);
-            this.EBOk.Name = "EBOk";
-            this.EBOk.Size = new System.Drawing.Size(89, 40);
-            this.EBOk.TabIndex = 10;
-            this.EBOk.Text = "OK";
-            this.EBOk.UseVisualStyleBackColor = false;
-            // 
-            // strzelnicaDS
-            // 
-            this.strzelnicaDS.DataSetName = "StrzelnicaDS";
-            this.strzelnicaDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aMUNICJABindingSource
-            // 
-            this.aMUNICJABindingSource.DataMember = "AMUNICJA";
-            this.aMUNICJABindingSource.DataSource = this.strzelnicaDS;
-            // 
-            // aMUNICJATableAdapter
-            // 
-            this.aMUNICJATableAdapter.ClearBeforeFill = true;
-            // 
-            // bRONIETYPBindingSource
-            // 
-            this.bRONIETYPBindingSource.DataMember = "BRONIE_TYP";
-            this.bRONIETYPBindingSource.DataSource = this.strzelnicaDS;
-            // 
-            // bRONIE_TYPTableAdapter
-            // 
-            this.bRONIE_TYPTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn1
             // 
             this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -256,29 +248,37 @@
             this.nAZWADataGridViewTextBoxColumn.Name = "nAZWADataGridViewTextBoxColumn";
             this.nAZWADataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // iDDataGridViewTextBoxColumn
+            // bRONIETYPBindingSource
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.FillWeight = 45.68528F;
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bRONIETYPBindingSource.DataMember = "BRONIE_TYP";
+            this.bRONIETYPBindingSource.DataSource = this.strzelnicaDS;
             // 
-            // kALIBERDataGridViewTextBoxColumn
+            // EBOk
             // 
-            this.kALIBERDataGridViewTextBoxColumn.DataPropertyName = "KALIBER";
-            this.kALIBERDataGridViewTextBoxColumn.FillWeight = 127.1574F;
-            this.kALIBERDataGridViewTextBoxColumn.HeaderText = "KALIBER";
-            this.kALIBERDataGridViewTextBoxColumn.Name = "kALIBERDataGridViewTextBoxColumn";
-            this.kALIBERDataGridViewTextBoxColumn.ReadOnly = true;
+            this.EBOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.EBOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.EBOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EBOk.Location = new System.Drawing.Point(535, 305);
+            this.EBOk.Name = "EBOk";
+            this.EBOk.Size = new System.Drawing.Size(89, 40);
+            this.EBOk.TabIndex = 10;
+            this.EBOk.Text = "OK";
+            this.EBOk.UseVisualStyleBackColor = false;
             // 
-            // iLOSCWPAKIECIEDataGridViewTextBoxColumn
+            // EBProdText
             // 
-            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.DataPropertyName = "ILOSC_W_PAKIECIE";
-            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.FillWeight = 127.1574F;
-            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.HeaderText = "ILOSC_W_PAKIECIE";
-            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.Name = "iLOSCWPAKIECIEDataGridViewTextBoxColumn";
-            this.iLOSCWPAKIECIEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.EBProdText.Location = new System.Drawing.Point(36, 194);
+            this.EBProdText.Name = "EBProdText";
+            this.EBProdText.Size = new System.Drawing.Size(140, 20);
+            this.EBProdText.TabIndex = 7;
+            // 
+            // aMUNICJATableAdapter
+            // 
+            this.aMUNICJATableAdapter.ClearBeforeFill = true;
+            // 
+            // bRONIE_TYPTableAdapter
+            // 
+            this.bRONIE_TYPTableAdapter.ClearBeforeFill = true;
             // 
             // EdytBron
             // 
@@ -292,10 +292,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EBAmuGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aMUNICJABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EBCenaNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EBTypGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aMUNICJABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bRONIETYPBindingSource)).EndInit();
             this.ResumeLayout(false);
 

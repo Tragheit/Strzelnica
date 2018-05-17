@@ -503,7 +503,7 @@
             this.BrOdśwież.TabIndex = 3;
             this.BrOdśwież.Text = "Odśwież";
             this.BrOdśwież.UseVisualStyleBackColor = true;
-            this.BrOdśwież.Click += new System.EventHandler(this.refreshGridBr);
+            
             // 
             // BrUsuń
             // 
@@ -640,7 +640,7 @@
             this.StOdśwież.TabIndex = 3;
             this.StOdśwież.Text = "Odśwież";
             this.StOdśwież.UseVisualStyleBackColor = true;
-            this.StOdśwież.Click += new System.EventHandler(this.refreshGridSt);
+            
             // 
             // StUsuń
             // 
@@ -775,7 +775,7 @@
             this.KaOdśwież.TabIndex = 4;
             this.KaOdśwież.Text = "Odświerz";
             this.KaOdśwież.UseVisualStyleBackColor = true;
-            this.KaOdśwież.Click += new System.EventHandler(this.refreshGridKa);
+            
             // 
             // Trenerzy
             // 
@@ -889,7 +889,7 @@
             this.TrOdśwież.TabIndex = 3;
             this.TrOdśwież.Text = "Odświerz";
             this.TrOdśwież.UseVisualStyleBackColor = true;
-            this.TrOdśwież.Click += new System.EventHandler(this.refreshGridTr);
+         
             // 
             // TrEdytuj
             // 
@@ -1037,6 +1037,7 @@
             this.KlUsuń.TabIndex = 2;
             this.KlUsuń.Text = "Usuń";
             this.KlUsuń.UseVisualStyleBackColor = true;
+            this.KlUsuń.Click += new System.EventHandler(this.RemoveKlient);
             // 
             // KlOdśwież
             // 
@@ -1067,7 +1068,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(784, 445);
             this.tabControl.TabIndex = 0;
-            this.tabControl.Click += new System.EventHandler(this.refreshGridWyp);
+   
             // 
             // kLIENCITableAdapter
             // 
@@ -1099,6 +1100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 445);
             this.Controls.Add(this.tabControl);
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Strzelnica";
             this.Text = "Strzelnica V1.0";

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b75ef9306f949bead93c228c565f4da" Name="Diagram1">
+        <EntityTypeShape EntityType="StrzelnicaModel.AMUNICJA" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.BRONIE" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.BRONIE_TYP" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.KARNETY" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.KARNETY_RODZAJ" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.KLIENCI" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.KULOCHWYT" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.STANOWISKA" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.TRENERZY" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StrzelnicaModel.WYPOZYCZENIA" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="StrzelnicaModel.FK_BRONIE_AMUNICJA1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_BRONIE_BRONIE_TYP1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_WYPOŻYCZENIA_BRONIE1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_KARNETY_KARNETY_RODZAJ1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_KLIENCI_KARNETY1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_WYPOŻYCZENIA_KLIENCI1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.KULOCHWYTY" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_WYPOŻYCZENIA_STANOWISKA1" ManuallyRouted="false" />
+        <AssociationConnector Association="StrzelnicaModel.FK_WYPOŻYCZENIA_TRENERZY1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

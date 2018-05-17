@@ -15,6 +15,8 @@ namespace Strzelnica
         public NewTrainer()
         {
             InitializeComponent();
+
+         
         }
     }
 }

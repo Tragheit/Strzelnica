@@ -26,13 +26,23 @@ namespace Strzelnica
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        public void insertNewBron(object sender, EventArgs e)
         {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                BRONIE bron = new BRONIE
+                {
+                    PRODUCENT = NBProdText.Text.ToUpper(),
+                    MODEL = NBModText.Text.ToUpper(),
+                    TYP = NBTypGrid.SelectedCells[0].RowIndex,
+                   // AMUNICJA = ,
+                    CENA_WYPOZYCZENIA = NBCenaNum.Value 
 
-        }
+                };
 
-        private void NBAmuGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+                strzelnicaEntities.BRONIE.Add(bron);
+                strzelnicaEntities.SaveChanges();
+            }
 
         }
     }

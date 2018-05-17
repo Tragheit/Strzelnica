@@ -23,5 +23,11 @@ namespace Strzelnica
             this.kULOCHWYTTableAdapter.Fill(this.strzelnicaDS.KULOCHWYT);
 
         }
+
+        private void NSOk_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

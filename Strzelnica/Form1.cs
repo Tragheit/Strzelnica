@@ -119,41 +119,84 @@ namespace Strzelnica
 
         private void refreshGridKl(object sender, EventArgs e)
         {
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                List<KLIENCI> Klienci = strz.KLIENCI.ToList();
+
+                kLIENCIBindingSource.DataSource = Klienci;
+                dataGridView1.DataSource = kLIENCIBindingSource;
+            }
         }
 
         private void refreshGridTr(object sender, EventArgs e)
         {
-            dataGridView2.Update();
-            dataGridView2.Refresh();
+
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                List<TRENERZY> trenerzy = strz.TRENERZY.ToList();
+
+                tRENERZYBindingSource.DataSource = trenerzy;
+                dataGridView1.DataSource = tRENERZYBindingSource;
+            }
         }
 
         private void refreshGridKa(object sender, EventArgs e)
         {
-            dataGridView3.Update();
-            dataGridView3.Refresh();
+
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                List<KARNETY> karnety = strz.KARNETY.ToList();
+
+                kARNETYBindingSource.DataSource = Karnety;
+                dataGridView1.DataSource = kARNETYBindingSource;
+            }
         }
 
         private void refreshGridSt(object sender, EventArgs e)
         {
-            dataGridView4.Update();
-            dataGridView4.Refresh();
+
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                List<STANOWISKA> stanowiska = strz.STANOWISKA.ToList();
+
+                sTANOWISKABindingSource.DataSource = stanowiska;
+                dataGridView1.DataSource = sTANOWISKABindingSource;
+            }
         }
 
         private void refreshGridBr(object sender, EventArgs e)
         {
-            dataGridView5.Update();
-            dataGridView5.Refresh();
+
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                List<BRONIE> bronie = strz.BRONIE.ToList();
+
+                bRONIEBindingSource.DataSource = bronie;
+                dataGridView1.DataSource = bRONIEBindingSource;
+            }
         }
 
         private void refreshGridWyp(object sender, EventArgs e)
         {
-            dataGridView6.Update();
-            dataGridView6.Refresh();
+
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                List<WYPOZYCZENIA> wypożyczenia = strz.WYPOZYCZENIA.ToList();
+
+               wYPOZYCZENIABindingSource.DataSource = wypożyczenia;
+                dataGridView1.DataSource = wYPOZYCZENIABindingSource;
+            }
         }
 
+        public void RemoveKlient(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                int id = dataGridView1.SelectedCells[0].RowIndex;
+                strzelnicaEntities.KLIENCI.Remove(strzelnicaEntities.KLIENCI.Find(id));
+                strzelnicaEntities.SaveChanges();
+            }
+        }
     }
-    }
-    
-
+}

@@ -177,6 +177,7 @@
             this.NSOk.TabIndex = 6;
             this.NSOk.Text = "OK";
             this.NSOk.UseVisualStyleBackColor = false;
+            this.NSOk.Click += new System.EventHandler(this.NSOk_Click);
             // 
             // NSOdlegNum
             // 

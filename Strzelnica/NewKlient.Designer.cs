@@ -37,6 +37,7 @@
             this.NKOk = new System.Windows.Forms.Button();
             this.NKCheckBox = new System.Windows.Forms.CheckBox();
             this.NKWiekNum = new System.Windows.Forms.NumericUpDown();
+            this.klienciTableAdapter1 = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NKWiekNum)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +105,6 @@
             this.NKWiekLabel.Size = new System.Drawing.Size(44, 20);
             this.NKWiekLabel.TabIndex = 2;
             this.NKWiekLabel.Text = "Wiek";
-            this.NKWiekLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // NKImieText
             // 
@@ -133,6 +133,7 @@
             this.NKOk.TabIndex = 5;
             this.NKOk.Text = "OK";
             this.NKOk.UseVisualStyleBackColor = false;
+            this.NKOk.Click += new System.EventHandler(this.insertNewKlient);
             // 
             // NKCheckBox
             // 
@@ -145,6 +146,7 @@
             this.NKCheckBox.TabIndex = 4;
             this.NKCheckBox.Text = "Nowy karnet";
             this.NKCheckBox.UseVisualStyleBackColor = true;
+            this.NKCheckBox.Visible = false;
             this.NKCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // NKWiekNum
@@ -153,6 +155,10 @@
             this.NKWiekNum.Name = "NKWiekNum";
             this.NKWiekNum.Size = new System.Drawing.Size(120, 20);
             this.NKWiekNum.TabIndex = 8;
+            // 
+            // klienciTableAdapter1
+            // 
+            this.klienciTableAdapter1.ClearBeforeFill = true;
             // 
             // NewKlient
             // 
@@ -181,5 +187,6 @@
         private System.Windows.Forms.TextBox NKImieText;
         private System.Windows.Forms.TextBox NKNazwiskoText;
         private System.Windows.Forms.NumericUpDown NKWiekNum;
+        private StrzelnicaDSTableAdapters.KLIENCITableAdapter klienciTableAdapter1;
     }
 }
