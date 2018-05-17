@@ -15,8 +15,23 @@ namespace Strzelnica
         public NewTrainer()
         {
             InitializeComponent();
+        }
 
-         
+        public void insertNewTrener(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                TRENERZY trener = new TRENERZY()
+                {
+                    IMIE = NTImieText.Text.ToUpper(),
+                    NAZWISKO = NTNazwiskoText.Text.ToUpper(),
+
+                };
+
+                strzelnicaEntities.TRENERZY.Add(trener);
+                strzelnicaEntities.SaveChanges();
+            }
+
         }
     }
 }

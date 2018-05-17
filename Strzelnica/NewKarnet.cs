@@ -17,32 +17,19 @@ namespace Strzelnica
             InitializeComponent();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void insertNewkARNET(object sender, EventArgs e)
         {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                KARNETY karnet = new KARNETY()
+                {
+                 RODZAJ_KARNETU = NKGrid.SelectedCells[0].RowIndex,
+                 DATA_WAZNOSCI = NKDate.Value,
+                };
 
-        }
-
-        private void loadList()
-        {
-            
-
-
-        }
-
-        private void NewKarnet_Load(object sender, EventArgs e)
-        {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
-            this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NKGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+                strzelnicaEntities.KARNETY.Add(karnet);
+                strzelnicaEntities.SaveChanges();
+            }
 
         }
     }

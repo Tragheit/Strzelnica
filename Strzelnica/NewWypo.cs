@@ -17,26 +17,24 @@ namespace Strzelnica
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void insertNewWypo(object sender, EventArgs e)
         {
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                WYPOZYCZENIA wypo = new WYPOZYCZENIA()
+                {
+                    ID_KLIENTA = NWKlieGrid.SelectedCells[0].RowIndex,
+                    ID_TRENERA = NWTreGrid.SelectedCells[0].RowIndex,
+                    ID_STANOWISKA = NWStaGrid.SelectedCells[0].RowIndex,
+                    ID_BRONI = NWBroGrid.SelectedCells[0].RowIndex,
+                    ILOSC_PAKIETOW_AMUNICJI = (int)NWAmoNum.Value,
+                    DATA_POCZATEK = NWDatPoczPick.Value,
+                    DATA_KONIEC = NWDatKonPick.Value
+                };
 
-        }
-
-        private void NewWypo_Load(object sender, EventArgs e)
-        {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.BRONIE' . Możesz go przenieść lub usunąć.
-            this.bRONIETableAdapter.Fill(this.strzelnicaDS.BRONIE);
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.STANOWISKA' . Możesz go przenieść lub usunąć.
-            this.sTANOWISKATableAdapter.Fill(this.strzelnicaDS.STANOWISKA);
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.TRENERZY' . Możesz go przenieść lub usunąć.
-            this.tRENERZYTableAdapter.Fill(this.strzelnicaDS.TRENERZY);
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KLIENCI' . Możesz go przenieść lub usunąć.
-            this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
-
-        }
-
-        private void NWAmoNum_ValueChanged(object sender, EventArgs e)
-        {
+                strzelnicaEntities.WYPOZYCZENIA.Add(wypo);
+                strzelnicaEntities.SaveChanges();
+            }
 
         }
     }

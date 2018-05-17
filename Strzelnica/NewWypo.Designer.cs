@@ -95,7 +95,6 @@
             this.tableLayoutPanel1.Controls.Add(this.NWTrenLabel, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.NWStanoLabel, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.NWBronLabel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.NWAmuLabel, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.NDDatPoczLabel, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.NWKlieGrid, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.NWTreGrid, 2, 2);
@@ -106,6 +105,7 @@
             this.tableLayoutPanel1.Controls.Add(this.NWDatPoczPick, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.NWDatKonPick, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.NWAmoNum, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.NWAmuLabel, 3, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -140,7 +140,6 @@
             this.NWTrenLabel.Size = new System.Drawing.Size(55, 20);
             this.NWTrenLabel.TabIndex = 0;
             this.NWTrenLabel.Text = "Trener";
-            this.NWTrenLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // NWStanoLabel
             // 
@@ -166,7 +165,7 @@
             // 
             this.NWAmuLabel.AutoSize = true;
             this.NWAmuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.NWAmuLabel.Location = new System.Drawing.Point(342, 257);
+            this.NWAmuLabel.Location = new System.Drawing.Point(639, 257);
             this.NWAmuLabel.Name = "NWAmuLabel";
             this.NWAmuLabel.Size = new System.Drawing.Size(105, 20);
             this.NWAmuLabel.TabIndex = 4;
@@ -433,7 +432,6 @@
             this.NWAmoNum.Name = "NWAmoNum";
             this.NWAmoNum.Size = new System.Drawing.Size(255, 20);
             this.NWAmoNum.TabIndex = 17;
-            this.NWAmoNum.ValueChanged += new System.EventHandler(this.NWAmoNum_ValueChanged);
             // 
             // kLIENCITableAdapter
             // 
@@ -459,7 +457,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NewWypo";
             this.Text = "Dodaj Wypożyczenie";
-            this.Load += new System.EventHandler(this.NewWypo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NWKlieGrid)).EndInit();

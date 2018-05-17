@@ -44,7 +44,7 @@
             this.dATAPOCZATEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATAKONIECDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wYPOZYCZENIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.strzelnicaDS = new Strzelnica.StrzelnicaDS();
+            this.strzelnicaDS = new StrzelnicaDS();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.WypDodaj = new System.Windows.Forms.Button();
             this.WypEdytuj = new System.Windows.Forms.Button();
@@ -112,12 +112,12 @@
             this.KlUsuń = new System.Windows.Forms.Button();
             this.KlOdśwież = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.kLIENCITableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.KLIENCITableAdapter();
-            this.tRENERZYTableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.TRENERZYTableAdapter();
-            this.kARNETYTableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.KARNETYTableAdapter();
-            this.sTANOWISKATableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.STANOWISKATableAdapter();
-            this.bRONIETableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.BRONIETableAdapter();
-            this.wYPOZYCZENIATableAdapter = new Strzelnica.StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter();
+            this.kLIENCITableAdapter = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
+            this.tRENERZYTableAdapter = new StrzelnicaDSTableAdapters.TRENERZYTableAdapter();
+            this.kARNETYTableAdapter = new StrzelnicaDSTableAdapters.KARNETYTableAdapter();
+            this.sTANOWISKATableAdapter = new StrzelnicaDSTableAdapters.STANOWISKATableAdapter();
+            this.bRONIETableAdapter = new StrzelnicaDSTableAdapters.BRONIETableAdapter();
+            this.wYPOZYCZENIATableAdapter = new StrzelnicaDSTableAdapters.WYPOZYCZENIATableAdapter();
             this.Wypożyczenia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wYPOZYCZENIABindingSource)).BeginInit();

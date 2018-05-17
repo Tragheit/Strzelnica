@@ -33,7 +33,7 @@
             this.NSKulLabel = new System.Windows.Forms.Label();
             this.NSOdlegLabel = new System.Windows.Forms.Label();
             this.NSCenaLabel = new System.Windows.Forms.Label();
-            this.NSStanowGrid = new System.Windows.Forms.DataGridView();
+            this.NSKuloGrid = new System.Windows.Forms.DataGridView();
             this.nAZWADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mATERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pOZYCJADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +45,7 @@
             this.NSCenaNum = new System.Windows.Forms.NumericUpDown();
             this.kULOCHWYTTableAdapter = new StrzelnicaDSTableAdapters.KULOCHWYTTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NSStanowGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NSKuloGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kULOCHWYTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NSOdlegNum)).BeginInit();
@@ -63,7 +63,7 @@
             this.tableLayoutPanel1.Controls.Add(this.NSKulLabel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.NSOdlegLabel, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.NSCenaLabel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.NSStanowGrid, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.NSKuloGrid, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.NSOk, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.NSOdlegNum, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.NSCenaNum, 2, 3);
@@ -109,25 +109,25 @@
             this.NSCenaLabel.TabIndex = 2;
             this.NSCenaLabel.Text = "Cena Wypożyczenia";
             // 
-            // NSStanowGrid
+            // NSKuloGrid
             // 
-            this.NSStanowGrid.AllowUserToAddRows = false;
-            this.NSStanowGrid.AllowUserToDeleteRows = false;
-            this.NSStanowGrid.AutoGenerateColumns = false;
-            this.NSStanowGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.NSStanowGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NSStanowGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NSKuloGrid.AllowUserToAddRows = false;
+            this.NSKuloGrid.AllowUserToDeleteRows = false;
+            this.NSKuloGrid.AutoGenerateColumns = false;
+            this.NSKuloGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.NSKuloGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NSKuloGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nAZWADataGridViewTextBoxColumn,
             this.mATERIALDataGridViewTextBoxColumn,
             this.pOZYCJADataGridViewTextBoxColumn,
             this.mOBILNOSCDataGridViewTextBoxColumn});
-            this.NSStanowGrid.DataSource = this.kULOCHWYTBindingSource;
-            this.NSStanowGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NSStanowGrid.Location = new System.Drawing.Point(255, 21);
-            this.NSStanowGrid.Name = "NSStanowGrid";
-            this.NSStanowGrid.ReadOnly = true;
-            this.NSStanowGrid.Size = new System.Drawing.Size(453, 121);
-            this.NSStanowGrid.TabIndex = 3;
+            this.NSKuloGrid.DataSource = this.kULOCHWYTBindingSource;
+            this.NSKuloGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NSKuloGrid.Location = new System.Drawing.Point(255, 21);
+            this.NSKuloGrid.Name = "NSKuloGrid";
+            this.NSKuloGrid.ReadOnly = true;
+            this.NSKuloGrid.Size = new System.Drawing.Size(453, 121);
+            this.NSKuloGrid.TabIndex = 3;
             // 
             // nAZWADataGridViewTextBoxColumn
             // 
@@ -177,7 +177,6 @@
             this.NSOk.TabIndex = 6;
             this.NSOk.Text = "OK";
             this.NSOk.UseVisualStyleBackColor = false;
-            this.NSOk.Click += new System.EventHandler(this.NSOk_Click);
             // 
             // NSOdlegNum
             // 
@@ -205,10 +204,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NewStan";
             this.Text = "NewStan";
-            this.Load += new System.EventHandler(this.NewStan_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NSStanowGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NSKuloGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kULOCHWYTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.strzelnicaDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NSOdlegNum)).EndInit();
@@ -223,7 +221,7 @@
         private System.Windows.Forms.Label NSKulLabel;
         private System.Windows.Forms.Label NSOdlegLabel;
         private System.Windows.Forms.Label NSCenaLabel;
-        private System.Windows.Forms.DataGridView NSStanowGrid;
+        private System.Windows.Forms.DataGridView NSKuloGrid;
         private System.Windows.Forms.Button NSOk;
         private StrzelnicaDS strzelnicaDS;
         private System.Windows.Forms.BindingSource kULOCHWYTBindingSource;

@@ -17,16 +17,21 @@ namespace Strzelnica
             InitializeComponent();
         }
 
-        private void NewStan_Load(object sender, EventArgs e)
+        public void insertNewStanowisko(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.KULOCHWYT' . Możesz go przenieść lub usunąć.
-            this.kULOCHWYTTableAdapter.Fill(this.strzelnicaDS.KULOCHWYT);
+            using (StrzelnicaEntities strzelnicaEntities = new StrzelnicaEntities())
+            {
+                STANOWISKA stanowisko = new STANOWISKA()
+                {
+                    KULOCHWYT = NSKuloGrid.SelectedCells[0].RowIndex,
+                    ODLEGLOSC_OD_CELU = (int)NSOdlegNum.Value,
+                    CENA_WYNAJMU = NSCenaNum.Value
+                    
+                };
 
-        }
-
-        private void NSOk_Click(object sender, EventArgs e)
-        {
-            this.Close();
+                strzelnicaEntities.STANOWISKA.Add(stanowisko);
+                strzelnicaEntities.SaveChanges();
+            }
 
         }
     }

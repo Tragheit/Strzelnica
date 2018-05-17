@@ -41,7 +41,7 @@
             this.nAZWISKODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kLIENCIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.strzelnicaDS = new StrzelnicaDS();
-            this.DKDate = new System.Windows.Forms.DateTimePicker();
+            this.NKDate = new System.Windows.Forms.DateTimePicker();
             this.kLIENCITableAdapter = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DKNum)).BeginInit();
@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.Controls.Add(this.NKDataPoczLabel, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.NKMiesLabel, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.NKGrid, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.DKDate, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.NKDate, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -109,7 +109,6 @@
             this.NKKlieLabel.Size = new System.Drawing.Size(48, 20);
             this.NKKlieLabel.TabIndex = 4;
             this.NKKlieLabel.Text = "Klient";
-            this.NKKlieLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // NKDataPoczLabel
             // 
@@ -151,7 +150,6 @@
             this.NKGrid.ReadOnly = true;
             this.NKGrid.Size = new System.Drawing.Size(302, 99);
             this.NKGrid.TabIndex = 7;
-            this.NKGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NKGrid_CellContentClick);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -187,13 +185,13 @@
             this.strzelnicaDS.DataSetName = "StrzelnicaDS";
             this.strzelnicaDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DKDate
+            // NKDate
             // 
-            this.DKDate.Location = new System.Drawing.Point(189, 142);
-            this.DKDate.Margin = new System.Windows.Forms.Padding(2);
-            this.DKDate.Name = "DKDate";
-            this.DKDate.Size = new System.Drawing.Size(216, 20);
-            this.DKDate.TabIndex = 1;
+            this.NKDate.Location = new System.Drawing.Point(189, 142);
+            this.NKDate.Margin = new System.Windows.Forms.Padding(2);
+            this.NKDate.Name = "NKDate";
+            this.NKDate.Size = new System.Drawing.Size(216, 20);
+            this.NKDate.TabIndex = 1;
             // 
             // kLIENCITableAdapter
             // 
@@ -208,7 +206,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewKarnet";
             this.Text = "Dodaj Karnet";
-            this.Load += new System.EventHandler(this.NewKarnet_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DKNum)).EndInit();
@@ -223,7 +220,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button NKOk;
-        private System.Windows.Forms.DateTimePicker DKDate;
+        private System.Windows.Forms.DateTimePicker NKDate;
         private System.Windows.Forms.NumericUpDown DKNum;
         private System.Windows.Forms.Label NKKlieLabel;
         private System.Windows.Forms.Label NKDataPoczLabel;
