@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ESKuloLabel = new System.Windows.Forms.Label();
-            this.ESOdleglabel = new System.Windows.Forms.Label();
-            this.ESCenaLabel = new System.Windows.Forms.Label();
-            this.ESKuloGrid = new System.Windows.Forms.DataGridView();
-            this.ESOdleNum = new System.Windows.Forms.NumericUpDown();
-            this.ESCenaNum = new System.Windows.Forms.NumericUpDown();
             this.ESOk = new System.Windows.Forms.Button();
+            this.ESCenaNum = new System.Windows.Forms.NumericUpDown();
+            this.ESCenaLabel = new System.Windows.Forms.Label();
+            this.ESOdleNum = new System.Windows.Forms.NumericUpDown();
+            this.ESOdleglabel = new System.Windows.Forms.Label();
+            this.ESKuloLabel = new System.Windows.Forms.Label();
+            this.ESKuloGrid = new System.Windows.Forms.DataGridView();
+            this.ESStanLabel = new System.Windows.Forms.Label();
+            this.ESStanNum = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ESKuloGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ESOdleNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ESCenaNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ESOdleNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ESKuloGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ESStanNum)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -50,55 +53,86 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.63793F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.24713F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Controls.Add(this.ESKuloLabel, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ESOdleglabel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.ESCenaLabel, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.ESKuloGrid, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.ESOdleNum, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.ESCenaNum, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.ESOk, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.ESOk, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ESCenaNum, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ESCenaLabel, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.ESOdleNum, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ESOdleglabel, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.ESKuloLabel, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ESKuloGrid, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.ESStanLabel, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ESStanNum, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 311);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.24164F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.03718F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.40764F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.78344F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 387);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // ESKuloLabel
+            // ESOk
             // 
-            this.ESKuloLabel.AutoSize = true;
-            this.ESKuloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ESKuloLabel.Location = new System.Drawing.Point(37, 15);
-            this.ESKuloLabel.Name = "ESKuloLabel";
-            this.ESKuloLabel.Size = new System.Drawing.Size(80, 20);
-            this.ESKuloLabel.TabIndex = 0;
-            this.ESKuloLabel.Text = "Kulochwyt";
+            this.ESOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ESOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ESOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ESOk.Location = new System.Drawing.Point(557, 334);
+            this.ESOk.Name = "ESOk";
+            this.ESOk.Size = new System.Drawing.Size(99, 28);
+            this.ESOk.TabIndex = 6;
+            this.ESOk.Text = "OK";
+            this.ESOk.UseVisualStyleBackColor = false;
+            this.ESOk.Click += new System.EventHandler(this.editStanowisko);
             // 
-            // ESOdleglabel
+            // ESCenaNum
             // 
-            this.ESOdleglabel.AutoSize = true;
-            this.ESOdleglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ESOdleglabel.Location = new System.Drawing.Point(37, 201);
-            this.ESOdleglabel.Name = "ESOdleglabel";
-            this.ESOdleglabel.Size = new System.Drawing.Size(152, 20);
-            this.ESOdleglabel.TabIndex = 1;
-            this.ESOdleglabel.Text = "Odległość od Tarczy";
+            this.ESCenaNum.Location = new System.Drawing.Point(280, 334);
+            this.ESCenaNum.Name = "ESCenaNum";
+            this.ESCenaNum.Size = new System.Drawing.Size(163, 20);
+            this.ESCenaNum.TabIndex = 5;
             // 
             // ESCenaLabel
             // 
             this.ESCenaLabel.AutoSize = true;
             this.ESCenaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ESCenaLabel.Location = new System.Drawing.Point(280, 201);
+            this.ESCenaLabel.Location = new System.Drawing.Point(280, 292);
             this.ESCenaLabel.Name = "ESCenaLabel";
             this.ESCenaLabel.Size = new System.Drawing.Size(47, 20);
             this.ESCenaLabel.TabIndex = 2;
             this.ESCenaLabel.Text = "Cena";
+            // 
+            // ESOdleNum
+            // 
+            this.ESOdleNum.Location = new System.Drawing.Point(37, 334);
+            this.ESOdleNum.Name = "ESOdleNum";
+            this.ESOdleNum.Size = new System.Drawing.Size(163, 20);
+            this.ESOdleNum.TabIndex = 4;
+            // 
+            // ESOdleglabel
+            // 
+            this.ESOdleglabel.AutoSize = true;
+            this.ESOdleglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ESOdleglabel.Location = new System.Drawing.Point(37, 292);
+            this.ESOdleglabel.Name = "ESOdleglabel";
+            this.ESOdleglabel.Size = new System.Drawing.Size(152, 20);
+            this.ESOdleglabel.TabIndex = 1;
+            this.ESOdleglabel.Text = "Odległość od Tarczy";
+            // 
+            // ESKuloLabel
+            // 
+            this.ESKuloLabel.AutoSize = true;
+            this.ESKuloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ESKuloLabel.Location = new System.Drawing.Point(37, 99);
+            this.ESKuloLabel.Name = "ESKuloLabel";
+            this.ESKuloLabel.Size = new System.Drawing.Size(80, 20);
+            this.ESKuloLabel.TabIndex = 0;
+            this.ESKuloLabel.Text = "Kulochwyt";
             // 
             // ESKuloGrid
             // 
@@ -108,51 +142,44 @@
             this.ESKuloGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.ESKuloGrid, 2);
             this.ESKuloGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ESKuloGrid.Location = new System.Drawing.Point(37, 49);
+            this.ESKuloGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.ESKuloGrid.Location = new System.Drawing.Point(37, 135);
             this.ESKuloGrid.Name = "ESKuloGrid";
             this.ESKuloGrid.ReadOnly = true;
-            this.ESKuloGrid.Size = new System.Drawing.Size(492, 149);
+            this.ESKuloGrid.Size = new System.Drawing.Size(492, 154);
             this.ESKuloGrid.TabIndex = 3;
             // 
-            // ESOdleNum
+            // ESStanLabel
             // 
-            this.ESOdleNum.Location = new System.Drawing.Point(37, 235);
-            this.ESOdleNum.Name = "ESOdleNum";
-            this.ESOdleNum.Size = new System.Drawing.Size(163, 20);
-            this.ESOdleNum.TabIndex = 4;
+            this.ESStanLabel.AutoSize = true;
+            this.ESStanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ESStanLabel.Location = new System.Drawing.Point(37, 16);
+            this.ESStanLabel.Name = "ESStanLabel";
+            this.ESStanLabel.Size = new System.Drawing.Size(91, 20);
+            this.ESStanLabel.TabIndex = 7;
+            this.ESStanLabel.Text = "Stanowisko";
             // 
-            // ESCenaNum
+            // ESStanNum
             // 
-            this.ESCenaNum.Location = new System.Drawing.Point(280, 235);
-            this.ESCenaNum.Name = "ESCenaNum";
-            this.ESCenaNum.Size = new System.Drawing.Size(163, 20);
-            this.ESCenaNum.TabIndex = 5;
-            // 
-            // ESOk
-            // 
-            this.ESOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ESOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ESOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ESOk.Location = new System.Drawing.Point(567, 256);
-            this.ESOk.Name = "ESOk";
-            this.ESOk.Size = new System.Drawing.Size(89, 35);
-            this.ESOk.TabIndex = 6;
-            this.ESOk.Text = "OK";
-            this.ESOk.UseVisualStyleBackColor = false;
+            this.ESStanNum.Location = new System.Drawing.Point(37, 52);
+            this.ESStanNum.Name = "ESStanNum";
+            this.ESStanNum.Size = new System.Drawing.Size(163, 20);
+            this.ESStanNum.TabIndex = 8;
             // 
             // EdytStanowisko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 311);
+            this.ClientSize = new System.Drawing.Size(696, 387);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "EdytStanowisko";
             this.Text = "Edytuj Stanowisko";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ESKuloGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ESOdleNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ESCenaNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ESOdleNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ESKuloGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ESStanNum)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +194,7 @@
         private System.Windows.Forms.NumericUpDown ESOdleNum;
         private System.Windows.Forms.NumericUpDown ESCenaNum;
         private System.Windows.Forms.Button ESOk;
+        private System.Windows.Forms.Label ESStanLabel;
+        private System.Windows.Forms.NumericUpDown ESStanNum;
     }
 }

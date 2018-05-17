@@ -29,5 +29,45 @@ namespace Strzelnica
             this.kLIENCITableAdapter.Fill(this.strzelnicaDS.KLIENCI);
 
         }
+
+        private void editKlient(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                int id = (int)EWWybNum.Value;
+                WYPOZYCZENIA wypozyczenia = strz.WYPOZYCZENIA.Find(id);
+
+                if (!EWKlieGrid.SelectedCells[0].RowIndex.Equals(null))
+                {
+                    wypozyczenia.ID_KLIENTA = EWKlieGrid.SelectedCells[0].RowIndex;
+                }
+
+                if (!EWTrenGrid.SelectedCells[0].RowIndex.Equals(null))
+                {
+                    wypozyczenia.ID_TRENERA = EWTrenGrid.SelectedCells[0].RowIndex;
+                }
+
+                if (!EWStanGrid.SelectedCells[0].RowIndex.Equals(null))
+                {
+                    wypozyczenia.ID_STANOWISKA = EWStanGrid.SelectedCells[0].RowIndex;
+                }
+
+                if (EWBronGrid.SelectedCells[0].RowIndex.Equals(null))
+                {
+                    wypozyczenia.ID_BRONI = EWBronGrid.SelectedCells[0].RowIndex;
+                }
+
+                if (!EWIloscNum.Value.Equals(null))
+                {
+                    wypozyczenia.ILOSC_PAKIETOW_AMUNICJI = (int)EWIloscNum.Value;
+                }
+
+                strz.SaveChanges();
+                this.Close();
+            }
+        }
+
     }
-}
+
+    }
+

@@ -16,5 +16,29 @@ namespace Strzelnica
         {
             InitializeComponent();
         }
+
+        public void editTrener(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                int id = (int)ETWybNum.Value;
+                TRENERZY trener = strz.TRENERZY.Find(id);
+
+                if (ETImieText.Text != "")
+                {
+                    trener.IMIE = ETImieText.Text.ToUpper();
+                }
+
+                if (ETNazwiskoText.Text != "")
+                {
+                    trener.NAZWISKO = ETNazwiskoText.Text.ToUpper();
+                }
+
+
+                strz.SaveChanges();
+                this.Close();
+            }
+        }
+
     }
 }

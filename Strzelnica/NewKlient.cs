@@ -40,14 +40,7 @@ namespace Strzelnica
             }
 
         }
-
-            
-                //usuwanie
-             // strzelnicaEntitys.KLIENCI.Remove(strzelnicaEntitys.KLIENCI.Find(44));
-               // strzelnicaEntitys.SaveChanges();
-
-                                         
-
+                                        
             }
  
         }

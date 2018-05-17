@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace Strzelnica
 {
     public partial class Strzelnica : Form
-    {
-
+    { 
         public Strzelnica()
         {
             InitializeComponent();
@@ -127,7 +126,7 @@ namespace Strzelnica
                 List<TRENERZY> trenerzy = strz.TRENERZY.ToList();
 
                 tRENERZYBindingSource.DataSource = trenerzy;
-                dataGridView1.DataSource = tRENERZYBindingSource;
+                dataGridView2.DataSource = tRENERZYBindingSource;
             }
         }
 
@@ -138,8 +137,8 @@ namespace Strzelnica
             {
                 List<KARNETY> karnety = strz.KARNETY.ToList();
 
-                kARNETYBindingSource.DataSource = Karnety;
-                dataGridView1.DataSource = kARNETYBindingSource;
+                kARNETYBindingSource.DataSource = karnety;
+                dataGridView3.DataSource = kARNETYBindingSource;
             }
         }
 
@@ -151,7 +150,7 @@ namespace Strzelnica
                 List<STANOWISKA> stanowiska = strz.STANOWISKA.ToList();
 
                 sTANOWISKABindingSource.DataSource = stanowiska;
-                dataGridView1.DataSource = sTANOWISKABindingSource;
+                dataGridView4.DataSource = sTANOWISKABindingSource;
             }
         }
 
@@ -163,7 +162,7 @@ namespace Strzelnica
                 List<BRONIE> bronie = strz.BRONIE.ToList();
 
                 bRONIEBindingSource.DataSource = bronie;
-                dataGridView1.DataSource = bRONIEBindingSource;
+                dataGridView5.DataSource = bRONIEBindingSource;
             }
         }
 
@@ -175,7 +174,7 @@ namespace Strzelnica
                 List<WYPOZYCZENIA> wypożyczenia = strz.WYPOZYCZENIA.ToList();
 
                wYPOZYCZENIABindingSource.DataSource = wypożyczenia;
-                dataGridView1.DataSource = wYPOZYCZENIABindingSource;
+                dataGridView6.DataSource = wYPOZYCZENIABindingSource;
             }
         }
 
@@ -238,5 +237,18 @@ namespace Strzelnica
                 strzelnicaEntities.SaveChanges();
             }
         }
+
+        public void EditTrener(object sender, EventArgs e) { }
+        public void EditKarnet(object sender, EventArgs e) { }
+        public void EditStanowisko(object sender, EventArgs e) { }
+        public void EditBron(object sender, EventArgs e) { }
+        public void EditWypozyczenie(object sender, EventArgs e) { }
+
+
+
+
+
+
+
     }
 }

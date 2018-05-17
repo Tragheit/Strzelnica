@@ -17,16 +17,6 @@ namespace Strzelnica
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EBAmuGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void EdytBron_Load(object sender, EventArgs e)
         {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'strzelnicaDS.BRONIE_TYP' . Możesz go przenieść lub usunąć.
@@ -35,5 +25,44 @@ namespace Strzelnica
             this.aMUNICJATableAdapter.Fill(this.strzelnicaDS.AMUNICJA);
 
         }
+
+        public void editBron(object sender, EventArgs e)
+        {
+            using (StrzelnicaEntities strz = new StrzelnicaEntities())
+            {
+                int id = (int)EBWybNum.Value;
+                BRONIE bronie = strz.BRONIE.Find(id);
+
+                if (EBAmuGrid.SelectedCells[0].RowIndex.Equals(null))
+                {
+                    bronie.AMUNICJA = EBAmuGrid.SelectedCells[0].RowIndex;
+                }
+
+                if (EBProdText.Text != "")
+                {
+                    bronie.PRODUCENT = EBProdText.Text;
+
+                }
+
+                if (EBModText.Text != "")
+                {
+                    bronie.MODEL = EBModText.Text;
+                }
+
+                if (!EBTypGrid.SelectedCells[0].RowIndex.Equals(null))
+                {
+                    bronie.TYP = EBTypGrid.SelectedCells[0].RowIndex;
+                }
+
+                if (!EBCenaNum.Value.Equals(null))
+                {
+                    bronie.CENA_WYPOZYCZENIA = EBCenaNum.Value;
+                }
+
+                strz.SaveChanges();
+                this.Close();
+            }
+        }
     }
 }
+
