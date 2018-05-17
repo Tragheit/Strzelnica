@@ -110,7 +110,7 @@
             this.KlDodaj = new System.Windows.Forms.Button();
             this.KlEdytuj = new System.Windows.Forms.Button();
             this.KlUsuń = new System.Windows.Forms.Button();
-            this.KlUOdśwież = new System.Windows.Forms.Button();
+            this.KlOdśwież = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.kLIENCITableAdapter = new StrzelnicaDSTableAdapters.KLIENCITableAdapter();
             this.tRENERZYTableAdapter = new StrzelnicaDSTableAdapters.TRENERZYTableAdapter();
@@ -503,6 +503,7 @@
             this.BrOdśwież.TabIndex = 3;
             this.BrOdśwież.Text = "Odśwież";
             this.BrOdśwież.UseVisualStyleBackColor = true;
+            this.BrOdśwież.Click += new System.EventHandler(this.refreshGridBr);
             // 
             // BrUsuń
             // 
@@ -639,6 +640,7 @@
             this.StOdśwież.TabIndex = 3;
             this.StOdśwież.Text = "Odśwież";
             this.StOdśwież.UseVisualStyleBackColor = true;
+            this.StOdśwież.Click += new System.EventHandler(this.refreshGridSt);
             // 
             // StUsuń
             // 
@@ -773,6 +775,7 @@
             this.KaOdśwież.TabIndex = 4;
             this.KaOdśwież.Text = "Odświerz";
             this.KaOdśwież.UseVisualStyleBackColor = true;
+            this.KaOdśwież.Click += new System.EventHandler(this.refreshGridKa);
             // 
             // Trenerzy
             // 
@@ -886,6 +889,7 @@
             this.TrOdśwież.TabIndex = 3;
             this.TrOdśwież.Text = "Odświerz";
             this.TrOdśwież.UseVisualStyleBackColor = true;
+            this.TrOdśwież.Click += new System.EventHandler(this.refreshGridTr);
             // 
             // TrEdytuj
             // 
@@ -992,7 +996,7 @@
             this.tableLayoutPanel1.Controls.Add(this.KlDodaj, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.KlEdytuj, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.KlUsuń, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.KlUOdśwież, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.KlOdśwież, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 376);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -1034,15 +1038,16 @@
             this.KlUsuń.Text = "Usuń";
             this.KlUsuń.UseVisualStyleBackColor = true;
             // 
-            // KlUOdśwież
+            // KlOdśwież
             // 
-            this.KlUOdśwież.Location = new System.Drawing.Point(387, 2);
-            this.KlUOdśwież.Margin = new System.Windows.Forms.Padding(2);
-            this.KlUOdśwież.Name = "KlUOdśwież";
-            this.KlUOdśwież.Size = new System.Drawing.Size(80, 28);
-            this.KlUOdśwież.TabIndex = 3;
-            this.KlUOdśwież.Text = "Odśwież";
-            this.KlUOdśwież.UseVisualStyleBackColor = true;
+            this.KlOdśwież.Location = new System.Drawing.Point(387, 2);
+            this.KlOdśwież.Margin = new System.Windows.Forms.Padding(2);
+            this.KlOdśwież.Name = "KlOdśwież";
+            this.KlOdśwież.Size = new System.Drawing.Size(80, 28);
+            this.KlOdśwież.TabIndex = 3;
+            this.KlOdśwież.Text = "Odśwież";
+            this.KlOdśwież.UseVisualStyleBackColor = true;
+            this.KlOdśwież.Click += new System.EventHandler(this.refreshGridKl);
             // 
             // tabControl
             // 
@@ -1062,6 +1067,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(784, 445);
             this.tabControl.TabIndex = 0;
+            this.tabControl.Click += new System.EventHandler(this.refreshGridWyp);
             // 
             // kLIENCITableAdapter
             // 
@@ -1175,7 +1181,7 @@
         private System.Windows.Forms.Button KlDodaj;
         private System.Windows.Forms.Button KlEdytuj;
         private System.Windows.Forms.Button KlUsuń;
-        private System.Windows.Forms.Button KlUOdśwież;
+        private System.Windows.Forms.Button KlOdśwież;
         private StrzelnicaDS strzelnicaDS;
         private System.Windows.Forms.BindingSource kLIENCIBindingSource;
         private StrzelnicaDSTableAdapters.KLIENCITableAdapter kLIENCITableAdapter;

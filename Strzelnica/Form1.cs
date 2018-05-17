@@ -117,6 +117,42 @@ namespace Strzelnica
             EWyp.Show();
         }
 
+        private void refreshGridKl(object sender, EventArgs e)
+        {
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+        }
+
+        private void refreshGridTr(object sender, EventArgs e)
+        {
+            dataGridView2.Update();
+            dataGridView2.Refresh();
+        }
+
+        private void refreshGridKa(object sender, EventArgs e)
+        {
+            dataGridView3.Update();
+            dataGridView3.Refresh();
+        }
+
+        private void refreshGridSt(object sender, EventArgs e)
+        {
+            dataGridView4.Update();
+            dataGridView4.Refresh();
+        }
+
+        private void refreshGridBr(object sender, EventArgs e)
+        {
+            dataGridView5.Update();
+            dataGridView5.Refresh();
+        }
+
+        private void refreshGridWyp(object sender, EventArgs e)
+        {
+            dataGridView6.Update();
+            dataGridView6.Refresh();
+        }
+
     }
     }
     
